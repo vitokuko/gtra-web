@@ -1,57 +1,68 @@
-<!-- [ Content ] Start -->
-<div class="authentication-wrapper authentication-2 ui-bg-cover ui-bg-overlay-container px-4" style="background-image: url('assets/img/bg/sonatel.jpg');">
-  <div class="ui-bg-overlay bg-dark opacity-25"></div>
+<!-- [ content ] Start -->
+<div class="authentication-wrapper authentication-3">
+    <div class="authentication-inner">
 
-  <div class="authentication-inner py-5">
+        <!-- [ Side container ] Start -->
+        <!-- Do not display the container on extra small, small and medium screens -->
+        <div class="d-none d-lg-flex col-lg-8 align-items-center ui-bg-cover ui-bg-overlay-container p-5" style="background-image: url('assets/img/bg/sonatel.jpg');">
+            <div class="ui-bg-overlay bg-dark opacity-50"></div>
+            <!-- [ Text ] Start -->
+            <div class="w-100 text-white px-5">
+                <h1 class="display-2 font-weight-bolder mb-4">JOIN OUR<br>COMMUNITY</h1>
+                <div class="text-large font-weight-light">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vehicula ex eu gravida faucibus. Suspendisse viverra pharetra purus. Proin fringilla ac lorem at sagittis. Proin tincidunt dui et nunc ultricies dignissim.
+                </div>
+            </div>
+            <!-- [ Text ] End -->
+        </div>
+        <!-- [ Side container ] End -->
 
-      <div class="card">
-          <div class="p-4 p-sm-5">
-              <!-- [ Logo ] Start -->
-              <div class="d-flex justify-content-center align-items-center pb-2 mb-4">
-                  <div class="ui-w-60">
-                      <div class="w-100 position-relative">
-                          <img src="assets/img/logo-dark.png" alt="Brand Logo" class="img-fluid">
-                          <div class="clearfix"></div>
-                      </div>
-                  </div>
-              </div>
-              <!-- [ Logo ] End -->
+        <!-- [ Form container ] Start -->
+        <div class="d-flex col-lg-4 align-items-center bg-white p-5">
+            <!-- Inner container -->
+            <!-- Have to add `.d-flex` to control width via `.col-*` classes -->
+            <div class="d-flex col-sm-7 col-md-5 col-lg-12 px-0 px-xl-4 mx-auto">
+                <div class="w-100">
 
-              <h5 class="text-center text-muted font-weight-normal mb-4">E-parking</h5>
+                    <!-- [ Logo ] Start -->
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="ui-w-60">
+                            <div class="w-100 position-relative">
+                                <img src="assets/img/logo-dark.png" alt="Brand Logo" class="img-fluid">
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [ Logo ] End -->
 
-              <!-- Form -->
-              <form>
-                  <div class="form-group">
-                      <label class="form-label">Email</label>
-                      <input type="text" class="form-control">
-                      <div class="clearfix"></div>
-                  </div>
-                  <div class="form-group">
-                      <label class="form-label d-flex justify-content-between align-items-end">
-                          <span>Mot de passe</span>
-                          <a href="auth/pageMotDePasseOublier" class="d-block small">Mot de passe oublié?</a>
-                      </label>
-                      <input type="password" class="form-control">
-                      <div class="clearfix"></div>
-                  </div>
-                  <div class="d-flex justify-content-between align-items-center m-0">
-                      <label class="custom-control custom-checkbox m-0">
-                          <input type="checkbox" class="custom-control-input">
-                          <span class="custom-control-label">Remember me</span>
-                      </label>
-                      <button type="button" class="btn btn-primary">Se connecter</button>
-                  </div>
-              </form>
-              <!-- [ Form ] End -->
+                    <h4 class="text-center text-lighter font-weight-normal mt-5 mb-0">Connectez-vous à votre compte</h4>
 
-          </div>
-          <div class="card-footer py-3 px-4 px-sm-5">
-              <div class="text-center text-muted">
-                  Vous n'avez pas de compte?
-                  <a href="auth/pageInscription">S'inscrire</a>
-              </div>
-          </div>
-      </div>
-  </div>
+                    <!-- [ Form ] Start -->
+                    <form class="my-5">
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="text" class="form-control">
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label d-flex justify-content-between align-items-end">
+                                    <span>Mot de passe</span>
+                                    <a [routerLink]="['/auth/pageMotDePasseOublier']"class="d-block small">Mot de passe oublié?</a>
+                                </label>
+                            <input type="password" class="form-control">
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center m-0">
+                            <button type="button" class="btn btn-primary">Se connecter</button>
+                        </div>
+                    </form>
+                    <!-- [ Form ] End -->
+
+                </div>
+            </div>
+        </div>
+        <!-- [ Form container ] End -->
+
+    </div>
 </div>
-<!-- / Content -->
+<!-- [ content ] End -->
