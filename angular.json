@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "gtra-web"
+  "defaultProject": "gtra-web",
+  "cli": {
+    "analytics": "850d6eaf-d61c-4845-80d6-8d5175554e51"
+  }
 }

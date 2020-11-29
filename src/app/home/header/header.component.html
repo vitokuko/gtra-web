@@ -157,19 +157,17 @@
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
                                     <span class="d-inline-flex flex-lg-row-reverse align-items-center align-middle">
                                         <img src="assets/img/avatars/1.png" alt class="d-block ui-w-30 rounded-circle">
-                                        <span class="px-1 mr-lg-2 ml-2 ml-lg-0">Cindy Deitch</span>
+                                        <span class="px-1 mr-lg-2 ml-2 ml-lg-0">Elisa</span>
                                     </span>
         </a>
         <div class="dropdown-menu dropdown-menu-right">
           <a href="javascript:" class="dropdown-item">
-            <i class="feather icon-user text-muted"></i> &nbsp; My profile</a>
+            <i class="feather icon-user text-muted"></i> &nbsp; Mon profil</a>
           <a href="javascript:" class="dropdown-item">
-            <i class="feather icon-mail text-muted"></i> &nbsp; Messages</a>
-          <a href="javascript:" class="dropdown-item">
-            <i class="feather icon-settings text-muted"></i> &nbsp; Account settings</a>
+            <i class="feather icon-settings text-muted"></i> &nbsp; Paramètres du compte</a>
           <div class="dropdown-divider"></div>
-          <a href="javascript:" class="dropdown-item">
-            <i class="feather icon-power text-danger"></i> &nbsp; Log Out</a>
+          <a [routerLink]="['/auth/login']" class="dropdown-item">
+            <i class="feather icon-power text-danger"></i> &nbsp; Se dèconnecter</a>
         </div>
       </div>
     </div>
