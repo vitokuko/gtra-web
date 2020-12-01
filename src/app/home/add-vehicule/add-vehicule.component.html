@@ -11,120 +11,6 @@
                 <li class="breadcrumb-item active"><a href="#!">Ajouter Véhicule</a></li>
             </ol>
         </div>
-        <div class="row">
-            <!-- customar project  start -->
-            <div class="col-xl-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row align-items-center m-l-0">
-                            <div class="col-sm-6">
-                            </div>
-                            <div class="col-sm-6 text-right">
-                                <button class="btn btn-success btn-sm mb-3 btn-round" data-toggle="modal" data-target="#modal-report"><i class="feather icon-plus"></i> Ajout Véhicule</button>
-                            </div>
-                        </div>
-                        <div class="table-responsive">
-                            <table id="report-table" class="table mb-0">
-                                <thead class="thead-light">
-                                    <tr> 
-                                        <th>Immatriculation</th>
-                                        <th>Date de mise en circulation</th>
-                                        <th>Nombre de place</th>
-                                        <th>Durée amortissement</th>
-                                        <th>Amortissement mensuel</th>
-                                        <th>Puissance</th>
-                                        <th>Cout d'achat</th>
-                                        <th>Valeur nette comptable</th>
-                                        <th>Marque</th>
-                                        <th>Modele</th>
-                                        <th>Prénom bénéficiaire</th>
-                                        <th>Nom bénéficiaire</th>
-                                        <th>Statut</th>
-                                        <th>Direction</th>
-                                        <th>Pole</th>
-                                        <th>Département</th>
-                                        <th>Etat</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="align-middle">
-                                            <p class="m-0 d-inline-block align-middle font-16">
-                                                <a href="#!" class="text-body">DK 7072 AR</a>
-                                            </p>
-                                        </td>
-                                        <td class="align-middle">
-                                            05/06/2013
-                                        </td>
-                                        <td class="align-middle">
-                                            5
-                                        </td>
-                                        <td class="align-middle">
-                                            60
-                                        </td>
-                                        <td class="align-middle">
-                                            525000
-                                        </td>
-                                        <td class="align-middle">
-                                            20
-                                        </td>
-                                        <td class="align-middle">
-                                            31500000
-                                        </td>
-                                        <td class="align-middle">
-                                            -00
-                                        </td>
-                                        <td class="align-middle">
-                                            FORD
-                                        </td>
-                                        <td class="align-middle">
-                                            EDGE
-                                        </td>
-                                        <td class="align-middle">
-                                            Roger
-                                        </td>
-                                        <td class="align-middle">
-                                            HUCHARD
-                                        </td>
-                                        <td class="align-middle">
-                                            Département
-                                        </td>
-                                        <td class="align-middle">
-                                            DV
-                                        </td>
-                                        <td class="align-middle">
-                                            DV
-                                        </td>
-                                        <td class="align-middle">
-                                            DRVI
-                                        </td>
-                                        <td class="align-middle">
-                                            <span class="badge badge-success">Active</span>
-                                        </td>
-
-                                    </tr>                                       
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- customar project  end -->
-        </div>
-    </div>
-    <!-- [ content ] End -->
-   <!-- [ Layout footer ] End -->
- </div>
- <div class="modal fade" id="modal-report" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Ajout Véhicule</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
             <div class="modal-body">
                 <form>
                     <div class="row">
@@ -249,12 +135,11 @@
                         </div>
                       
                         <div class="col-sm-12">
-                            <button class="btn btn-primary">Submit</button>
+                            <button [routerLink]="['/home/listVehicule']" class="btn btn-primary">Submit</button>
                             <button class="btn btn-danger">Clear</button>
                         </div>
                     </div>
                 </form>
             </div>
-        </div>
     </div>
 </div>
