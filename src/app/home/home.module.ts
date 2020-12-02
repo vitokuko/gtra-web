@@ -4,6 +4,9 @@ import {HomeRoutingModule} from './home-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { AccueilComponent } from './accueil/accueil.component';
+import { UtilisateurComponent } from './utilisateur/utilisateur.component';
+import { ClientComponent } from './client/client.component';
+import { AdminComponent } from './admin/admin.component';
 import { ListVehiculeComponent } from './list-vehicule/list-vehicule.component';
 import { AddVehiculeComponent } from './add-vehicule/add-vehicule.component';
 import { TicketListComponent } from './ticket-list/ticket-list.component';
@@ -16,6 +19,9 @@ import { TicketDetailsComponent } from './ticket-details/ticket-details.componen
     NavbarComponent,
     HeaderComponent,
     AccueilComponent,
+    UtilisateurComponent,
+    ClientComponent,
+    AdminComponent,
     ListVehiculeComponent,
     AddVehiculeComponent,
     TicketListComponent,
