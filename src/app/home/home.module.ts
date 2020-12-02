@@ -6,6 +6,9 @@ import { HeaderComponent } from './header/header.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { ListVehiculeComponent } from './list-vehicule/list-vehicule.component';
 import { AddVehiculeComponent } from './add-vehicule/add-vehicule.component';
+import { TicketListComponent } from './ticket-list/ticket-list.component';
+import { TicketEditComponent } from './ticket-edit/ticket-edit.component';
+import { TicketDetailsComponent } from './ticket-details/ticket-details.component';
 
 
 @NgModule({
@@ -15,6 +18,9 @@ import { AddVehiculeComponent } from './add-vehicule/add-vehicule.component';
     AccueilComponent,
     ListVehiculeComponent,
     AddVehiculeComponent,
+    TicketListComponent,
+    TicketEditComponent,
+    TicketDetailsComponent,
   ],
   imports: [
     CommonModule,
