@@ -1,0 +1,145 @@
+ <!-- [ Layout content ] Start -->
+ <div class="layout-content">
+
+    <!-- [ content ] Start -->
+    <div class="container-fluid flex-grow-1 container-p-y">
+        <h4 class="font-weight-bold py-3 mb-0">Véhicule</h4>
+        <div class="text-muted small mt-0 mb-4 d-block breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#"><i class="feather icon-home"></i></a></li>
+                <li class="breadcrumb-item"><a href="#!">Gestion des véhicules</a></li>
+                <li class="breadcrumb-item active"><a href="#!">Ajouter Véhicule</a></li>
+            </ol>
+        </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Catégorie">Catégorie</label>
+                                <select class="form-control" id="Catégorie">
+                                    <option value=""></option>
+                                    <option value="1">VEX</option>
+                                    <option value="2">vsc</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Immatriculation">Immmatriculation</label>
+                                <input type="text" class="form-control" id="Immatriculation" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group fill">
+                                <label class="floating-label" for="Date de mise en circulation">Date de mise en circulation</label>
+                                <input type="text" class="form-control" id="Date de mise en circulation" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group fill">
+                                <label class="floating-label" for="Nombre de place">Nombre de place</label>
+                                <input type="text" class="form-control" id="Nombre de place" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="amortissement en mois">Amortissemnt mensuel</label>
+                                <input type="text" class="form-control" id="Amortissement mensuel" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group fill">
+                                <label class="floating-label" for="Puissance">Puissance</label>
+                                <input type="text" class="form-control" id="Puissance" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Cout d'achat">Cout d'achat</label>
+                                <input type="text" class="form-control" id="Cout d'achat" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group fill">
+                                <label class="floating-label" for="Marque">Marque</label>
+                                <input type="text" class="form-control" id="Marque" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Modéle">Modele</label>
+                                <input type="text" class="form-control" id="Modele" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group fill">
+                                <label class="floating-label" for="Prénom bénéficiaire">Prénom bénéficiaire</label>
+                                <input type="text" class="form-control" id="Prénom bénéficiaire" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Nom bénéficiaire">Nom bénéficiaire</label>
+                                <input type="text" class="form-control" id="Nom bénéficiaire" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Statut">Statut</label>
+                                <input type="text" class="form-control" id="Statut" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Direction">Direction</label>
+                                <select class="form-control" id="Direction">
+                                    <option value=""></option>
+                                    <option value="1">DV</option>
+                                    <option value="2">DAL</option>
+                                    <option value="3">DPRS</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Pole">Pole</label>
+                                <select class="form-control" id="Pole">
+                                    <option value=""></option>
+                                    <option value="1">DV</option>
+                                    <option value="2">DAL</option>
+                                    <option value="3">DPRS</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Department">Département</label>
+                                <select class="form-control" id="Department">
+                                    <option value=""></option>
+                                    <option value="1">DRVI</option>
+                                    <option value="2">A2I</option>
+                                    <option value="3">DAL</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Etat">Etat</label>
+                                <select class="form-control" id="Etat">
+                                    <option value=""></option>
+                                    <option value="1">Bon</option>
+                                    <option value="2">Panne</option>
+                                </select>
+                            </div>
+                        </div>
+                      
+                        <div class="col-sm-12">
+                            <button [routerLink]="['/home/listVehicule']" class="btn btn-primary">Submit</button>
+                            <button class="btn btn-danger">Clear</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+    </div>
+</div>

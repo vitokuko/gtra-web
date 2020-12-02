@@ -7,7 +7,8 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 import { ClientComponent } from './client/client.component';
 import { AdminComponent } from './admin/admin.component';
-
+import { ListVehiculeComponent } from './list-vehicule/list-vehicule.component';
+import { AddVehiculeComponent } from './add-vehicule/add-vehicule.component';
 
 
 @NgModule({
@@ -17,7 +18,9 @@ import { AdminComponent } from './admin/admin.component';
     AccueilComponent,
     UtilisateurComponent,
     ClientComponent,
-    AdminComponent
+    AdminComponent,
+    ListVehiculeComponent,
+    AddVehiculeComponent
   ],
   imports: [
     CommonModule,

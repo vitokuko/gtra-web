@@ -16,33 +16,37 @@
   <ul class="sidenav-inner py-1">
 
     <!-- Dashboards -->
-    <li class="sidenav-item open active">
-      <h6 class="sidenav-link">
+    <li class="sidenav-item active"> 
+      <a href="javascript:" [routerLink]="['/home/accueil']" class="sidenav-link">
         <i class="sidenav-icon feather icon-home"></i>
         <div>Tableau de bord</div>
-      </h6>
+      </a>
     </li>
     <li class="sidenav-item open active">
-      <h6 class="sidenav-link sidenav-toggle">
+      <a href="javascript:" class="sidenav-link sidenav-toggle">
           <i class="sidenav-icon feather icon-book"></i>
           <div>Gestion des Vehicules</div>
-      </h6>
+      </a>
       <ul class="sidenav-menu">
-          <li class="sidenav-item"><a href="school-dashboard.html" class="sidenav-link">
+          <li class="sidenav-item"><a [routerLink]="['/home/listVehicule']" class="sidenav-link">
                   <div>Lister Vehicules</div>
               </a></li>
-          <li class="sidenav-item"><a href="school-student.html" class="sidenav-link">
+          <li class="sidenav-item active"><a [routerLink]="['/home/addVehicule']" class="sidenav-link">
                   <div>Ajouter Vehicules</div>
               </a></li>
       </ul>
     </li>
     <li class="sidenav-item open active">
-      <h6 class="sidenav-link sidenav-toggle">
+      <a href="javascript:" class="sidenav-link sidenav-toggle">
           <i class="sidenav-icon feather icon-target"></i>
           <div>Paramètre</div>
-      </h6>
+      </a>
       <ul class="sidenav-menu">
+<<<<<<< HEAD
           <li class="sidenav-item "><a href="home/utilisateur" class="sidenav-link">
+=======
+          <li class="sidenav-item active"><a href="crypto-dashboard.html" class="sidenav-link">
+>>>>>>> 12540f8080e8f69e8296404710ac939fdd312cfc
                   <div>Utilisateur</div>
               </a></li>
           <li class="sidenav-item"><a href="crypto-exchange.html" class="sidenav-link">
@@ -54,10 +58,10 @@
       </ul>
     </li>
     <li class="sidenav-item open active">
-      <h6 class="sidenav-link sidenav-toggle">
+      <a href="javascript:" class="sidenav-link sidenav-toggle">
         <i class="sidenav-icon feather icon-shield"></i>
         <div>Tickets</div>
-      </h6>
+      </a>
       <ul class="sidenav-menu">
         <li class="sidenav-item">
             <a href="pages_tickets_list.html" class="sidenav-link">
