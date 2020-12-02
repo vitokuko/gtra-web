@@ -4,6 +4,9 @@ import {HomeRoutingModule} from './home-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { AccueilComponent } from './accueil/accueil.component';
+import { UtilisateurComponent } from './utilisateur/utilisateur.component';
+import { ClientComponent } from './client/client.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 
@@ -11,7 +14,10 @@ import { AccueilComponent } from './accueil/accueil.component';
   declarations: [
     NavbarComponent,
     HeaderComponent,
-    AccueilComponent
+    AccueilComponent,
+    UtilisateurComponent,
+    ClientComponent,
+    AdminComponent
   ],
   imports: [
     CommonModule,
