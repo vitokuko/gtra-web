@@ -1,0 +1,106 @@
+   <!-- [ Layout content ] Start -->
+   <div class="layout-content">
+
+    <!-- [ content ] Start -->
+    <div class="container-fluid flex-grow-1 container-p-y">
+        <h4 class="font-weight-bold py-3 mb-0">Editer ticket</h4>
+        <div class="text-muted small mt-0 mb-4 d-block breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#"><i class="feather icon-home"></i></a></li>
+                <li class="breadcrumb-item"><a href="#!">Ticket</a></li>
+                <li class="breadcrumb-item active"><a href="#!">Editer ticket</a></li>
+            </ol>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="floating-label" for="Immatriculation">Immmatriculation</label>
+                                        <input type="text" class="form-control" id="Immatriculation" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group fill">
+                                        <label class="floating-label" for="Kilométrage">Kilométrage</label>
+                                        <input type="text" class="form-control" id="Kilométrage" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Motif de la demande</label>
+                                        <select class="mb-3 form-control">
+                                            <option value=""></option>
+                                            <option value="1">Entretien</option>
+                                            <option value="2">Réparation</option>
+                                            <option value="3">Réparation pneus</option>
+                                            <option value="4">Remplacement pneus</option>
+                                            <option value="5">Visite technique</option>
+                                            <option value="6">Véhicule accidenté (Sinistre)</option>
+                                            <option value="7">Révision à 50000</option>
+                                            <option value="8">Révision à 100000</option>
+                                            <option value="9">Révision exceptionnelle</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group fill">
+                                        <label class="floating-label" for="Disponibilité">Disponibilité véhicule pour immobilisation</label>
+                                        <input type="text" class="form-control" id="Disponibilité" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Description</label>
+                                <textarea id="tinymce-editor"></textarea><br>
+                                <label class="file btn waves-effect waves-light btn-outline-primary mt-3 file-btn" for="flup">
+                                    <i class="feather icon-paperclip"></i>Add Atachment
+                                    <input type="file" name="file"  class="d-none" id="flup"/>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn waves-effect waves-light btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ content ] End -->
+    <script>
+        // Bootstrap Markdown
+        $(function() {
+            $('#tinymce-editor').markdown({
+                iconlibrary: 'fa',
+                footer: '<div id="md-character-footer"></div><small id="md-character-counter" class="text-muted">350 character left</small>',
+
+                onChange: function(e) {
+                    var contentLength = e.getContent().length;
+
+                    if (contentLength > 350) {
+                        $('#md-character-counter')
+                            .removeClass('text-muted')
+                            .addClass('text-danger')
+                            .html((contentLength - 350) + ' character surplus.');
+                    } else {
+                        $('#md-character-counter')
+                            .removeClass('text-danger')
+                            .addClass('text-muted')
+                            .html((350 - contentLength) + ' character left.');
+                    }
+                },
+            });
+
+            // Update character counter
+            $('#markdown').trigger('change');
+
+
+            // *******************************************************************
+            // Fix icons
+
+            $('.md-editor .fa-header').removeClass('fa fa-header').addClass('fas fa-heading');
+            $('.md-editor .fa-picture-o').removeClass('fa fa-picture-o').addClass('far fa-image');
+        });
+    </script>

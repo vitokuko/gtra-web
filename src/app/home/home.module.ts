@@ -9,6 +9,9 @@ import { ClientComponent } from './client/client.component';
 import { AdminComponent } from './admin/admin.component';
 import { ListVehiculeComponent } from './list-vehicule/list-vehicule.component';
 import { AddVehiculeComponent } from './add-vehicule/add-vehicule.component';
+import { TicketListComponent } from './ticket-list/ticket-list.component';
+import { TicketEditComponent } from './ticket-edit/ticket-edit.component';
+import { TicketDetailsComponent } from './ticket-details/ticket-details.component';
 
 
 @NgModule({
@@ -20,7 +23,10 @@ import { AddVehiculeComponent } from './add-vehicule/add-vehicule.component';
     ClientComponent,
     AdminComponent,
     ListVehiculeComponent,
-    AddVehiculeComponent
+    AddVehiculeComponent,
+    TicketListComponent,
+    TicketEditComponent,
+    TicketDetailsComponent,
   ],
   imports: [
     CommonModule,
