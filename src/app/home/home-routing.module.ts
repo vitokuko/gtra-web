@@ -10,6 +10,8 @@ import { AddVehiculeComponent } from './add-vehicule/add-vehicule.component';
 import { TicketListComponent } from './ticket-list/ticket-list.component';
 import { TicketEditComponent } from './ticket-edit/ticket-edit.component';
 import { TicketDetailsComponent } from './ticket-details/ticket-details.component';
+import { TicketAdminComponent } from './ticket-admin/ticket-admin.component';
+import { TicketClientComponent } from './ticket-client/ticket-client.component';
 
 
 const routes: Routes = [
@@ -52,6 +54,14 @@ const routes: Routes = [
       {
         path: 'ticketDetails',
         component: TicketDetailsComponent,
+      },
+      {
+        path: 'ticketClient',
+        component: TicketClientComponent,
+      },
+      {
+        path: 'ticketAdmin',
+        component: TicketAdminComponent,
       }
     ]
   }
