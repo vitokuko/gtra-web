@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
+import {DataService} from "../../shared/data/data.service";
 
 @Component({
   selector: 'app-login',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router, public dataService: DataService) { }
 
   ngOnInit(): void {
+  }
+
+  connect(): void {
+    this.router.navigate(['/home/accueil']);
   }
 
 }
