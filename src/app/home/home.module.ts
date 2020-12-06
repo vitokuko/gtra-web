@@ -12,6 +12,8 @@ import { AddVehiculeComponent } from './add-vehicule/add-vehicule.component';
 import { TicketListComponent } from './ticket-list/ticket-list.component';
 import { TicketEditComponent } from './ticket-edit/ticket-edit.component';
 import { TicketDetailsComponent } from './ticket-details/ticket-details.component';
+import { TicketClientComponent } from './ticket-client/ticket-client.component';
+import { TicketAdminComponent } from './ticket-admin/ticket-admin.component';
 
 
 @NgModule({
@@ -27,6 +29,8 @@ import { TicketDetailsComponent } from './ticket-details/ticket-details.componen
     TicketListComponent,
     TicketEditComponent,
     TicketDetailsComponent,
+    TicketClientComponent,
+    TicketAdminComponent,
   ],
   imports: [
     CommonModule,
