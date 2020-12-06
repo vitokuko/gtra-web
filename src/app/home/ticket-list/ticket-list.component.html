@@ -12,10 +12,20 @@
                                 <li class="breadcrumb-item active">Lister ticket</li>
                             </ol>
                         </div>
+                       
                         <div class="card">
                             <div class="card-body">
+                                <div class="col-sm-7 offset-5">
+                                    <button type="button"
+                                            class="btn btn-lg btn-primary"
+                                            style="float:right;"
+                                            [routerLink]="['/home/ticketEdit']"
+                                    >
+                                      <i class="feather icon-plus"></i>Editer ticket</button>
+                                  </div>
                                 <div class="table-responsive">
                                     <table id="tickets-list" class="table table-striped table-bordered">
+                            
                                         <thead>
                                             <tr>
                                                 <th>Ticket ID</th>
