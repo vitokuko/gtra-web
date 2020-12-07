@@ -1,37 +1,24 @@
 
 <!-- [ Layout sidenav ] Start -->
-<div id="layout-sidenav" class="layout-sidenav sidenav sidenav-vertical bg-white logo-dark">
-  <!-- Brand demo (see assets/css/demo/demo.css) -->
-  <div class="app-brand demo">
-                    <span class="app-brand-logo demo">
-                        <img src="assets/img/logo-dark1.png" alt="Brand Logo" class="img-fluid">
-                    </span>
-    <a [routerLink]="['/home/accueil']" class="app-brand-text demo sidenav-text font-weight-normal ml-2">E-Parking</a>
-    <a href="javascript:" class="layout-sidenav-toggle sidenav-link text-large ml-auto">
-      <i class="ion ion-md-menu align-middle"></i>
-    </a>
-  </div>
-  <div class="sidenav-divider mt-0"></div>
-
-  <!-- Links -->
-  <ul class="sidenav-inner py-1">
-
+<div class="sidenav bg-dark">
+  <div id="layout-sidenav" class=" container layout-sidenav-horizontal sidenav-horizontal flex-grow-0 bg-dark">
+      <ul class="sidenav-inner">
     <!-- Dashboards -->
-    <li class="sidenav-item active">
-      <a href="javascript:" [routerLink]="['/home/accueil']" class="sidenav-link">
+    <li class="sidenav-item">
+      <a href="javascript:" [routerLink]="['/home/accueil']" class="sidenav-link ">
         <i class="sidenav-icon feather icon-home"></i>
         <div>Tableau de bord</div>
       </a>
     </li>
     <li class="sidenav-item">
-      <a [routerLink]="['/home/gestionVehicules']" class="sidenav-link">
+      <a [routerLink]="['/home/listVehicule']" class="sidenav-link ">
           <i class="sidenav-icon feather icon-book"></i>
           <div>Gestion des Vehicules</div>
       </a>
     </li>
     <li class="sidenav-item">
       <a [routerLink]="['/home/ticketList']" class="sidenav-link">
-        <i class="sidenav-icon feather icon-book"></i>
+        <i class="sidenav-icon feather icon-shield"></i>
         <div>Tickets</div>
       </a>
     </li>
@@ -53,7 +40,7 @@
         <div>Comptabilité</div>
       </a>
     </li>
-    <li class="sidenav-item open active">
+    <li class="sidenav-item">
       <a href="javascript:" class="sidenav-link sidenav-toggle">
           <i class="sidenav-icon feather icon-target"></i>
           <div>Paramètre</div>
@@ -71,5 +58,6 @@
       </ul>
     </li>
   </ul>
+</div>
 </div>
 <!-- [ Layout sidenav ] End -->

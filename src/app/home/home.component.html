@@ -1,18 +1,33 @@
 <!-- [ Layout wrapper ] Start -->
-<div class="layout-wrapper layout-2">
+<div class="layout-wrapper layout-1 layout-without-sidenav">
   <div class="layout-inner">
+    <app-header></app-header>
     <app-navbar></app-navbar>
     <!-- [ Layout container ] Start -->
     <div class="layout-container">
-      <app-header></app-header>
       <!-- [ Layout content ] Start -->
       <div class="layout-content">
 
         <!-- [ content ] Start -->
-        <div class="container-fluid flex-grow-1 container-p-y">
+        <div class="container flex-grow-1 container-p-y">
           <router-outlet></router-outlet>
         </div>
         <!-- [ content ] End -->
+        <!-- [ Layout footer ] Start -->
+        <nav class="layout-footer footer footer-light">
+                            <div class="container-fluid d-flex flex-wrap justify-content-between text-center container-p-x pb-3">
+                                <div class="pt-3">
+                                    <span class="float-md-right d-none d-lg-block">&copy; Exclusive on Themeforest | Hand-crafted &amp; Made with <i class="fas fa-heart text-danger mr-2"></i></span>
+                                </div>
+                                <div>
+                                    <a href="javascript:" class="footer-link pt-3">About Us</a>
+                                    <a href="javascript:" class="footer-link pt-3 ml-4">Help</a>
+                                    <a href="javascript:" class="footer-link pt-3 ml-4">Contact</a>
+                                    <a href="javascript:" class="footer-link pt-3 ml-4">Terms &amp; Conditions</a>
+                                </div>
+                            </div>
+        </nav>
+                        <!-- [ Layout footer ] End -->
 
       </div>
       <!-- [ Layout content ] Start -->
@@ -23,3 +38,4 @@
   <div class="layout-overlay layout-sidenav-toggle"></div>
 </div>
 <!-- [ Layout wrapper] End -->
+ 
