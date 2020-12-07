@@ -21,6 +21,8 @@ import { DemandeAllocationComponent } from './demande-allocation/demande-allocat
 import { GestionAttributionComponent } from './gestion-attribution/gestion-attribution.component';
 import { StatistiquesComponent } from './statistiques/statistiques.component';
 import { ComptabiliteComponent } from './comptabilite/comptabilite.component';
+import { ConfigurationComponent } from './configuration/configuration.component';
+import { CategorieVehiculeComponent } from './configuration/categorie-vehicule/categorie-vehicule.component';
 
 
 
@@ -46,6 +48,8 @@ import { ComptabiliteComponent } from './comptabilite/comptabilite.component';
     GestionAttributionComponent,
     StatistiquesComponent,
     ComptabiliteComponent,
+    ConfigurationComponent,
+    CategorieVehiculeComponent,
   ],
   imports: [
     CommonModule,

@@ -19,6 +19,7 @@ import { DemandeAllocationComponent } from './demande-allocation/demande-allocat
 import { AllocationVehiculeComponent } from './allocation-vehicule/allocation-vehicule.component';
 import { StatistiquesComponent } from './statistiques/statistiques.component';
 import { ComptabiliteComponent } from './comptabilite/comptabilite.component';
+import { ConfigurationComponent } from './configuration/configuration.component';
 
 
 const routes: Routes = [
@@ -97,6 +98,10 @@ const routes: Routes = [
       {
         path: 'comptabilite',
         component:ComptabiliteComponent,
+      },
+      {
+        path: 'configuration',
+        component: ConfigurationComponent,
       }
     ]
   }
