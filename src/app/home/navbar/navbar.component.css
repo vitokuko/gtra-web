@@ -1,3 +1,19 @@
 #layout-sidenav a:hover{
-    background: radial-gradient(rgb(236, 233, 229),rgb(223, 219, 219));
+    background: radial-gradient(rgb(236, 233, 229),#020202);
+}
+#layout-sidenav ul li{
+	list-style-type: none;
+	display: inline-block; 
+	
+}
+#layout-sidenav ul li:hover {             
+	background: radial-gradient(rgb(173, 166, 153),#020202);
+}
+#layout-sidenav ul li:hover ul{
+	display: block;
+}
+
+#layout-sidenav ul li li {
+	background:#0e0d0d;
+	width: 150px;
 }
