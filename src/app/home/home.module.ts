@@ -19,6 +19,8 @@ import { GestionVehiculesComponent } from './gestion-vehicules/gestion-vehicules
 import { AllocationVehiculeComponent } from './allocation-vehicule/allocation-vehicule.component';
 import { DemandeAllocationComponent } from './demande-allocation/demande-allocation.component';
 import { GestionAttributionComponent } from './gestion-attribution/gestion-attribution.component';
+import { StatistiquesComponent } from './statistiques/statistiques.component';
+import { ComptabiliteComponent } from './comptabilite/comptabilite.component';
 
 
 
@@ -42,6 +44,8 @@ import { GestionAttributionComponent } from './gestion-attribution/gestion-attri
     AllocationVehiculeComponent,
     DemandeAllocationComponent,
     GestionAttributionComponent,
+    StatistiquesComponent,
+    ComptabiliteComponent,
   ],
   imports: [
     CommonModule,

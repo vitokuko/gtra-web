@@ -17,6 +17,8 @@ import { GestionVehiculesComponent } from './gestion-vehicules/gestion-vehicules
 import { GestionAttributionComponent } from './gestion-attribution/gestion-attribution.component';
 import { DemandeAllocationComponent } from './demande-allocation/demande-allocation.component';
 import { AllocationVehiculeComponent } from './allocation-vehicule/allocation-vehicule.component';
+import { StatistiquesComponent } from './statistiques/statistiques.component';
+import { ComptabiliteComponent } from './comptabilite/comptabilite.component';
 
 
 const routes: Routes = [
@@ -87,6 +89,14 @@ const routes: Routes = [
       {
         path: 'allocationVehicule',
         component: AllocationVehiculeComponent,
+      },
+      {
+        path: 'statistiques',
+        component: StatistiquesComponent,
+      },
+      {
+        path: 'comptabilite',
+        component:ComptabiliteComponent,
       }
     ]
   }
