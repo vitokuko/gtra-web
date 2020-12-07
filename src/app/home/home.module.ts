@@ -14,6 +14,12 @@ import { TicketEditComponent } from './ticket-edit/ticket-edit.component';
 import { TicketDetailsComponent } from './ticket-details/ticket-details.component';
 import { TicketClientComponent } from './ticket-client/ticket-client.component';
 import { TicketAdminComponent } from './ticket-admin/ticket-admin.component';
+import { GestionClientsComponent } from './gestion-clients/gestion-clients.component';
+import { GestionVehiculesComponent } from './gestion-vehicules/gestion-vehicules.component';
+import { AllocationVehiculeComponent } from './allocation-vehicule/allocation-vehicule.component';
+import { DemandeAllocationComponent } from './demande-allocation/demande-allocation.component';
+import { GestionAttributionComponent } from './gestion-attribution/gestion-attribution.component';
+
 
 
 @NgModule({
@@ -31,6 +37,11 @@ import { TicketAdminComponent } from './ticket-admin/ticket-admin.component';
     TicketDetailsComponent,
     TicketClientComponent,
     TicketAdminComponent,
+    GestionClientsComponent,
+    GestionVehiculesComponent,
+    AllocationVehiculeComponent,
+    DemandeAllocationComponent,
+    GestionAttributionComponent,
   ],
   imports: [
     CommonModule,
