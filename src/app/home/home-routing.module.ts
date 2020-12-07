@@ -12,6 +12,13 @@ import { TicketEditComponent } from './ticket-edit/ticket-edit.component';
 import { TicketDetailsComponent } from './ticket-details/ticket-details.component';
 import { TicketAdminComponent } from './ticket-admin/ticket-admin.component';
 import { TicketClientComponent } from './ticket-client/ticket-client.component';
+import { GestionClientsComponent } from './gestion-clients/gestion-clients.component';
+import { GestionVehiculesComponent } from './gestion-vehicules/gestion-vehicules.component';
+import { GestionAttributionComponent } from './gestion-attribution/gestion-attribution.component';
+import { DemandeAllocationComponent } from './demande-allocation/demande-allocation.component';
+import { AllocationVehiculeComponent } from './allocation-vehicule/allocation-vehicule.component';
+import { StatistiquesComponent } from './statistiques/statistiques.component';
+import { ComptabiliteComponent } from './comptabilite/comptabilite.component';
 
 
 const routes: Routes = [
@@ -62,6 +69,34 @@ const routes: Routes = [
       {
         path: 'ticketAdmin',
         component: TicketAdminComponent,
+      },
+      {
+        path: 'gestionClients',
+        component: GestionClientsComponent,
+      },
+      {
+        path: 'gestionVehicules',
+        component: GestionVehiculesComponent,
+      },
+      {
+        path: 'gestionAttribution',
+        component: GestionAttributionComponent,
+      },
+      {
+        path: 'demandeAllocation',
+        component: DemandeAllocationComponent,
+      },
+      {
+        path: 'allocationVehicule',
+        component: AllocationVehiculeComponent,
+      },
+      {
+        path: 'statistiques',
+        component: StatistiquesComponent,
+      },
+      {
+        path: 'comptabilite',
+        component:ComptabiliteComponent,
       }
     ]
   }
