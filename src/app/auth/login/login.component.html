@@ -38,22 +38,22 @@
                     <h4 class="text-center text-lighter font-weight-normal mt-5 mb-0">Connectez-vous à votre compte</h4>
 
                     <!-- [ Form ] Start -->
-                    <form class="my-5">
+                    <form class="my-5" [formGroup]="connectForm" (ngSubmit)="onSubmit()">
                         <div class="form-group">
-                            <label class="form-label">Email</label>
-                            <input type="text" class="form-control">
+                            <label class="form-label">Username</label>
+                            <input type="text" class="form-control" formControlName="username" id="username"  placeholder="Enter username">
                             <div class="clearfix"></div>
                         </div>
                         <div class="form-group">
                             <label class="form-label d-flex justify-content-between align-items-end">
-                                    <span>Mot de passe</span>
-                                    <a [routerLink]="['/auth/pageMotDePasseOublier']"class="d-block small">Mot de passe oublié?</a>
-                                </label>
-                            <input type="password" class="form-control">
+                                <span>Mot de passe</span>
+                                <a [routerLink]="['/auth/pageMotDePasseOublier']" class="d-block small">Mot de passe oublié?</a>
+                            </label>
+                            <input type="password" formControlName="password" class="form-control" id="inputPassword3" placeholder="Password">
                             <div class="clearfix"></div>
                         </div>
                         <div class="d-flex justify-content-between align-items-center m-0">
-                            <button type="button" class="btn btn-primary" (click)="connect()">Se connecter</button>
+                            <button type="submit" class="btn btn-primary">Se connecter</button>
                         </div>
                     </form>
                     <!-- [ Form ] End -->
