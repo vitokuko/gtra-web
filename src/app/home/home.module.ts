@@ -23,6 +23,7 @@ import { StatistiquesComponent } from './statistiques/statistiques.component';
 import { ComptabiliteComponent } from './comptabilite/comptabilite.component';
 import { ConfigurationComponent } from './configuration/configuration.component';
 import { CategorieVehiculeComponent } from './configuration/categorie-vehicule/categorie-vehicule.component';
+import { RoleComponent } from './role/role.component';
 
 
 
@@ -50,6 +51,7 @@ import { CategorieVehiculeComponent } from './configuration/categorie-vehicule/c
     ComptabiliteComponent,
     ConfigurationComponent,
     CategorieVehiculeComponent,
+    RoleComponent,
   ],
   imports: [
     CommonModule,

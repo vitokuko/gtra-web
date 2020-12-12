@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <!-- [ Layout sidenav ] Start -->
 <div class="sidenav bg-dark ">
@@ -60,6 +61,69 @@
     </li>
   </ul>
 </div> 
+=======
+ <!-- [ Layout sidenav ] Start -->
+ <div class="sidenav bg-dark">
+  <div id="layout-sidenav" class=" layout-sidenav-horizontal sidenav-horizontal flex-grow-0 bg-dark">
+    <div class="container">
+        <ul class="sidenav-inner">
+            <!-- Dashboards -->
+          <li class="sidenav-item ">
+            <a href="javascript:" [routerLink]="['/home/accueil']" class="sidenav-link">
+              <i class="sidenav-icon feather icon-home"></i>
+              <div>Tableau de bord</div>
+            </a>
+          </li>
+          <li class="sidenav-item">
+            <a [routerLink]="['/home/gestionVehicules']" class="sidenav-link ">
+                <i class="sidenav-icon feather icon-book"></i>
+                <div>Gestion des Vehicules</div>
+            </a>
+          </li>
+          <li class="sidenav-item">
+            <a [routerLink]="['/home/ticketList']" class="sidenav-link">
+              <i class="sidenav-icon feather icon-shield"></i>
+              <div>Tickets</div>
+            </a>
+          </li>
+          <li class="sidenav-item">
+            <a [routerLink]="['/home/gestionClients']" class="sidenav-link">
+              <i i class="feather icon-users"></i>
+              <div>Gestion des clients</div>
+            </a>
+          </li>
+          <li class="sidenav-item">
+            <a [routerLink]="['/home/statistiques']" class="sidenav-link">
+              <i class='fas fa-chart-bar fa-lg'></i>
+              <div>Statistiques</div>
+            </a>
+          </li>
+          <li class="sidenav-item">
+            <a [routerLink]="['/home/comptabilite']" class="sidenav-link">
+              <i class='fas fa-landmark'></i>
+              <div>Charges</div>
+            </a>
+          </li>
+          <li class="sidenav-item">
+            <a href="javascript:" class="sidenav-link sidenav-toggle">
+                <i class="feather icon-settings"></i>
+                <div>Paramètre</div>
+            </a>
+            <ul class="sidenav-menu">
+                <li class="sidenav-item "><a [routerLink]="['/home/utilisateur']" class="sidenav-link">
+                        <div>Utilisateur</div>
+                    </a></li>
+                <li class="sidenav-item"><a [routerLink]="['/home/role']" class="sidenav-link">
+                        <div>Role</div>
+                    </a></li>
+                <li class="sidenav-item"><a [routerLink]="['/home/Configuration']" class="sidenav-link">
+                        <div>Configuration</div>
+                    </a></li>
+            </ul>
+          </li>
+        </ul>
+    </div>
+>>>>>>> 0e096985131c45fd389426c94e7928074701d795
 </div>
 </div>
 <!-- [ Layout sidenav ] End -->
