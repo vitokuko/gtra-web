@@ -1,8 +1,9 @@
 
 <!-- [ Layout sidenav ] Start -->
-<div class="sidenav bg-dark">
-  <div id="layout-sidenav" class=" container layout-sidenav-horizontal sidenav-horizontal flex-grow-0 bg-dark">
-      <ul class="sidenav-inner">
+<div class="sidenav bg-dark ">
+  <div id="layout-sidenav" class="layout-sidenav-horizontal sidenav-horizontal flex-grow-0 bg-dark">
+    <div class="container"> 
+    <ul class="sidenav-inner">
     <!-- Dashboards -->
     <li class="sidenav-item">
       <a href="javascript:" [routerLink]="['/home/accueil']" class="sidenav-link ">
@@ -24,19 +25,19 @@
     </li>
     <li class="sidenav-item">
       <a [routerLink]="['/home/gestionClients']" class="sidenav-link">
-        <i class="sidenav-icon feather icon-book"></i>
+        <i class="sidenav-icon feather icon-layers"></i>
         <div>Gestion des clients</div>
       </a>
     </li>
     <li class="sidenav-item">
       <a [routerLink]="['/home/statistiques']" class="sidenav-link">
-        <i class="sidenav-icon feather icon-book"></i>
+        <i class="sidenav-icon feather icon-activity"></i>
         <div>Statistiques</div>
       </a>
     </li>
     <li class="sidenav-item">
       <a [routerLink]="['/home/comptabilite']" class="sidenav-link">
-        <i class="sidenav-icon feather icon-book"></i>
+        <i class="sidenav-icon feather icon-package"></i>
         <div>Comptabilité</div>
       </a>
     </li>
@@ -58,6 +59,7 @@
       </ul>
     </li>
   </ul>
+</div> 
 </div>
 </div>
 <!-- [ Layout sidenav ] End -->
