@@ -57,6 +57,7 @@
                                 <th>Direction</th>
                                 <th>Pole</th>
                                 <th>Département</th>
+                                <th>Parking d'attache</th>
                                 <th>Etat</th>
                                 <th>Action</th>
                             </tr>
@@ -112,6 +113,9 @@
                                 </td>
                                 <td class="align-middle">
                                     DRVI
+                                </td>
+                                <td class="align-middle">
+                                    Siege
                                 </td>
                                 <td class="align-middle">
                                     <span class="badge badge-success">Bon</span>
@@ -234,6 +238,12 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
+                                        <label class="form-label" for="Parking">Parking d'attache</label>
+                                        <input type="text" class="form-control" id="Parking" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
                                         <label class="form-label" for="Etat">Etat</label>
                                         <select class="form-control" id="Etat">
                                             <option value=""></option>
@@ -242,7 +252,16 @@
                                         </select>
                                     </div>
                                 </div>
-                      
+                                <div class="col-sm-7">
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Description</label>
+                                        <textarea id="tinymce-editor"></textarea><br>
+                                        <label class="file btn waves-effect waves-light btn-outline-primary mt-3 file-btn" for="flup">
+                                            <i class="feather icon-paperclip"></i>Add Atachment
+                                            <input type="file" name="file"  class="d-none" id="flup"/>
+                                        </label>
+                                    </div>
+                                </div>
                         <div class="col-sm-12">
                             <button [routerLink]="" class="btn btn-primary">Submit</button>
                             <button class="btn btn-danger">Clear</button>
@@ -250,7 +269,7 @@
                     </div>
                 </form>
             </div>
-    </div>
-                </div>
-            </div>
         </div>
+    </div>
+ </div>
+</div>

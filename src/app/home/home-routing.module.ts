@@ -20,6 +20,7 @@ import { AllocationVehiculeComponent } from './allocation-vehicule/allocation-ve
 import { StatistiquesComponent } from './statistiques/statistiques.component';
 import { ComptabiliteComponent } from './comptabilite/comptabilite.component';
 import { ConfigurationComponent } from './configuration/configuration.component';
+import { RoleComponent } from './role/role.component';
 
 
 const routes: Routes = [
@@ -102,6 +103,10 @@ const routes: Routes = [
       {
         path: 'configuration',
         component: ConfigurationComponent,
+      },
+      {
+        path: 'role',
+        component: RoleComponent,
       }
     ]
   }
