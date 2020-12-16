@@ -15,8 +15,8 @@
                             <div class="form-label">
                                 <label class="floating-label" for="Category">Catégorie</label>
                                 <select class="form-control" id="Category">
-                                    <option value="1" selected>VEX - description</option>
-                                    <option value="2">VSC - description</option>
+                                    <option value="1" selected >VEX - description</option>
+                                    <option value="2" >VSC - description</option>
                                 </select>
                             </div>
                         </div>
@@ -31,15 +31,15 @@
                     </div>
                 </div>
             </div>
-                    <div class="row">
+                <div class="row">
                         <!-- customar project  start -->
                         <div class="col-xl-12">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="row align-items-center m-l-0">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-6"> 
                                         </div>
-                                    </div>
+                                    </div>                                 
                                     <div class="table-responsive">
                                         <table id="report-table" class="table mb-0">
                                             <thead class="thead-light">
@@ -49,85 +49,77 @@
                                                     <th>Nombre de place</th>
                                                     <th>Durée amortissement</th>
                                                     <th>Ancienneté en mois</th>
-                                                    <th>Puissance</th>
+                                                    <th>Ancienneté en année</th>
                                                     <th>Cout d'achat</th>
                                                     <th>Valeur nette comptable</th>
+                                                    <th>Puissance</th>
+                                                    <th>Visite technique</th>
+                                                    <th>Etat</th>
+                                                    <th>Catégorie</th>
                                                     <th>Marque</th>
                                                     <th>Modele</th>
-                                                    <th>Prénom</th>
-                                                    <th>Nom</th>
-                                                    <th>Statut</th>
+                                                    <th>Responsable véhicule</th>
                                                     <th>Direction</th>
-                                                    <th>Pole</th>
-                                                    <th>Département</th>
                                                     <th>Parking d'attache</th>
-                                                    <th>Etat</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
+                                                <tr *ngFor="let vehicule of allvehicules">
                                                     <td class="align-middle">
-                                                        <p class="m-0 d-inline-block align-middle font-16">
-                                                            <a href="#!" class="text-body">DK 7072 AR</a>
-                                                        </p>
+                                                        {{vehicule.immatriculation}}
                                                     </td>
                                                     <td class="align-middle">
-                                                        05/06/2013
+                                                        {{vehicule.dateDeMiseenCirculation}}
                                                     </td>
                                                     <td class="align-middle">
-                                                        5
+                                                        {{vehicule.nombrePlace}}
                                                     </td>
                                                     <td class="align-middle">
-                                                        60
+                                                        {{vehicule.amortissement}}
                                                     </td>
                                                     <td class="align-middle">
-                                                        525000
+                                                        {{vehicule.ancienneteMois}}
                                                     </td>
                                                     <td class="align-middle">
-                                                        20
+                                                        {{vehicule.ancienneteAnnee}}
                                                     </td>
                                                     <td class="align-middle">
-                                                        31500000
+                                                        {{vehicule.coutAchat}}
                                                     </td>
                                                     <td class="align-middle">
-                                                        -00
+                                                        {{vehicule.valeurNetteComptable}}
                                                     </td>
                                                     <td class="align-middle">
-                                                        FORD
+                                                        {{vehicule.puissance}}
                                                     </td>
                                                     <td class="align-middle">
-                                                        EDGE
+                                                        {{vehicule.visiteTechnique}}
                                                     </td>
                                                     <td class="align-middle">
-                                                        Roger
+                                                        {{vehicule.etat}}
                                                     </td>
                                                     <td class="align-middle">
-                                                        HUCHARD
+                                                        {{vehicule.categorieId}}
                                                     </td>
                                                     <td class="align-middle">
-                                                        Département
+                                                        {{vehicule.marqueId}}
                                                     </td>
                                                     <td class="align-middle">
-                                                        DV
+                                                        {{vehicule.modeleId}}
                                                     </td>
                                                     <td class="align-middle">
-                                                        DV
+                                                        {{vehicule.utilisateurId}}
                                                     </td>
                                                     <td class="align-middle">
-                                                        DRVI
+                                                        {{vehicule.directionId}}
                                                     </td>
                                                     <td class="align-middle">
-                                                        Siége
+                                                        {{vehicule.parkingId}}
                                                     </td>
-                                                    <td class="align-middle">
-                                                        <span class="badge badge-success">Active</span>
-                                                    </td>
-
                                                     <td class="table-action">
-                                                        <a href="#!" class="btn btn-icon btn-outline-primary"><i class="feather icon-eye"></i></a>
-                                                        <a href="#!" class="btn btn-icon btn-outline-success"><i class="feather icon-edit"></i></a>
-                                                        <a href="#!" class="btn btn-icon btn-outline-danger"><i class="feather icon-trash-2"></i></a>
+                                                        <a href="#" class="btn btn-icon btn-outline-success"><i class="feather icon-edit"></i></a>
+                                                        <a class="btn btn-icon btn-outline-danger"><i class="feather icon-trash-2" (click)="deleteVehicules(vehicule,id) "></i></a>
                                                     </td>
                                                 </tr>
                                             </tbody>
