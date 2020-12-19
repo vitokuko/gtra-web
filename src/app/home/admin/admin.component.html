@@ -35,65 +35,26 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <td>Elisabeth</td>
-                                                        <td>DIOUF</td>
-                                                        <td>elisabethdiouf@orange-sonatel.com</td>
-                                                        <td>772131399</td>
-                                                        <td>
-                                                            <a href="#!" class="btn btn-info btn-sm">Editer</a>
-                                                            <a href="#!" class="btn btn-danger btn-sm">Supprimer</a>
+                                                    <tr *ngFor="let admin of alladmins">
+                                                        <td class="align-middle">
+                                                            {{admin.prenom}}
                                                         </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Elisabeth</td>
-                                                        <td>DIOUF</td>
-                                                        <td>elisabethdiouf@orange-sonatel.com</td>
-                                                        <td>772131399</td>
-                                                        <td>
-                                                            <a href="#!" class="btn btn-info btn-sm">Editer</a>
-                                                            <a href="#!" class="btn btn-danger btn-sm">Supprimer</a>
+                                                        <td class="align-middle">
+                                                            {{admin.nom}}
                                                         </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Elisabeth</td>
-                                                        <td>DIOUF</td>
-                                                        <td>elisabethdiouf@orange-sonatel.com</td>
-                                                        <td>772131399</td>
-                                                        <td>
-                                                            <a href="#!" class="btn btn-info btn-sm">Editer</a>
-                                                            <a href="#!" class="btn btn-danger btn-sm">Supprimer</a>
+                                                        <td class="align-middle">
+                                                            {{admin.telephone}}
                                                         </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Elisabeth</td>
-                                                        <td>DIOUF</td>
-                                                        <td>elisabethdiouf@orange-sonatel.com</td>
-                                                        <td>772131399</td>
-                                                        <td>
-                                                            <a href="#!" class="btn btn-info btn-sm">Editer</a>
-                                                            <a href="#!" class="btn btn-danger btn-sm">Supprimer</a>
+                                                        <td class="align-middle">
+                                                            {{admin.statut}}
                                                         </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Elisabeth</td>
-                                                        <td>DIOUF</td>
-                                                        <td>elisabethdiouf@orange-sonatel.com</td>
-                                                        <td>772131399</td>
-                                                        <td>
-                                                            <a href="#!" class="btn btn-info btn-sm">Editer</a>
-                                                            <a href="#!" class="btn btn-danger btn-sm">Sepprimer</a>
+                                                        <td class="align-middle">
+                                                            {{admin.directionId}}
                                                         </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Elisabeth</td>
-                                                        <td>DIOUF</td>
-                                                        <td>elisabethdiouf@orange-sonatel.com</td>
-                                                        <td>772131399</td>
-                                                        <td>
-                                                            <a href="#!" class="btn btn-info btn-sm">Editer</a>
-                                                            <a href="#!" class="btn btn-danger btn-sm">Supprimer</a>
-                                                        </td>
+                                                       <td class="table-action">
+                                                        <a href="#" class="btn btn-icon btn-outline-success"><i class="feather icon-edit"></i></a>
+                                                        <a class="btn btn-icon btn-outline-danger"><i class="feather icon-trash-2"></i></a>
+                                                    </td>
                                                     </tr>
                                                 </tbody>
                                             </table>

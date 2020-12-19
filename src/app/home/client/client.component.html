@@ -28,7 +28,6 @@
                                                     <tr>
                                                         <th>Prénom</th>
                                                         <th>Nom</th>
-                                                        <th>Email</th>
                                                         <th>Téléphone</th>
                                                         <th>Statut</th>
                                                         <th>Direction</th>
@@ -36,77 +35,26 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <td>Elisabeth</td>
-                                                        <td>DIOUF</td>
-                                                        <td>elisabethdiouf@orange-sonatel.com</td>
-                                                        <td>772131399</td>
-                                                        <td>Directrice</td>
-                                                        <td>DAL</td>
-                                                        <td>
-                                                            <a href="#!" class="btn btn-info btn-sm">Editer</a>
-                                                            <a href="#!" class="btn btn-danger btn-sm">Supprimer</a>
+                                                    <tr *ngFor="let client of allclients">
+                                                        <td class="align-middle">
+                                                            {{client.prenom}}
                                                         </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Elisabeth</td>
-                                                        <td>DIOUF</td>
-                                                        <td>elisabethdiouf@orange-sonatel.com</td>
-                                                        <td>772131399</td>
-                                                        <td>Directrice</td>
-                                                        <td>DAL</td>
-                                                        <td>
-                                                            <a href="#!" class="btn btn-info btn-sm">Editer</a>
-                                                            <a href="#!" class="btn btn-danger btn-sm">Supprimer</a>
+                                                        <td class="align-middle">
+                                                            {{client.nom}}
                                                         </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Elisabeth</td>
-                                                        <td>DIOUF</td>
-                                                        <td>elisabethdiouf@orange-sonatel.com</td>
-                                                        <td>772131399</td>
-                                                        <td>Directrice</td>
-                                                        <td>DAL</td>
-                                                        <td>
-                                                            <a href="#!" class="btn btn-info btn-sm">Editer</a>
-                                                            <a href="#!" class="btn btn-danger btn-sm">Supprimer</a>
+                                                        <td class="align-middle">
+                                                            {{client.telephone}}
                                                         </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Elisabeth</td>
-                                                        <td>DIOUF</td>
-                                                        <td>elisabethdiouf@orange-sonatel.com</td>
-                                                        <td>772131399</td>
-                                                        <td>Directrice</td>
-                                                        <td>DAL</td>
-                                                        <td>
-                                                            <a href="#!" class="btn btn-info btn-sm">Editer</a>
-                                                            <a href="#!" class="btn btn-danger btn-sm">Supprimer</a>
+                                                        <td class="align-middle">
+                                                            {{client.statut}}
                                                         </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Elisabeth</td>
-                                                        <td>DIOUF</td>
-                                                        <td>elisabethdiouf@orange-sonatel.com</td>
-                                                        <td>772131399</td>
-                                                        <td>Directirce</td>
-                                                        <td>DAL</td>
-                                                        <td>
-                                                            <a href="#!" class="btn btn-info btn-sm">Editer</a>
-                                                            <a href="#!" class="btn btn-danger btn-sm">Supprimer</a>
+                                                        <td class="align-middle">
+                                                            {{client.directionId}}
                                                         </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Elisabeth</td>
-                                                        <td>DIOUF</td>
-                                                        <td>elisabethdiouf@orange-sonatel.com</td>
-                                                        <td>772131399</td>
-                                                        <td>Directrice</td>
-                                                        <td>DAL</td>
-                                                        <td>
-                                                            <a href="#!" class="btn btn-info btn-sm">Editer</a>
-                                                            <a href="#!" class="btn btn-danger btn-sm">Supprimer</a>
-                                                        </td>
+                                                       <td class="table-action">
+                                                        <a href="#" class="btn btn-icon btn-outline-success"><i class="feather icon-edit"></i></a>
+                                                        <a class="btn btn-icon btn-outline-danger"><i class="feather icon-trash-2"></i></a>
+                                                    </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
