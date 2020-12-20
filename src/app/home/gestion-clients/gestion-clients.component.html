@@ -1,16 +1,4 @@
-    <!-- [ Preloader ] End -->
 
-    <!-- [ Layout wrapper ] Start -->
-    <div class="layout-wrapper layout-2">
-        <div class="layout-inner">
-            <!-- [ Layout container ] Start -->
-            <div class="layout-container">
-
-                <!-- [ Layout content ] Start -->
-                <div class="layout-content">
-
-                    <!-- [ content ] Start -->
-                    <div class="container-fluid flex-grow-1 container-p-y">
                         <h4 class="font-weight-bold py-3 mb-0">Clients</h4>
                         <div class="text-muted small mt-0 mb-4 d-block breadcrumb">
                             <ol class="breadcrumb">
@@ -96,7 +84,6 @@
                                                         <tr>
                                                             <th>Prénom</th>
                                                             <th>Nom</th>
-                                                            <th>Email</th>
                                                             <th>Téléphone</th>
                                                             <th>Statut</th>
                                                             <th>Direction</th>
@@ -104,25 +91,22 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                            <td>Elisabeth</td>
-                                                            <td>DIOUF</td>
-                                                            <td>elisabethdiouf@orange-sonatel.com</td>
-                                                            <td>772131399</td>
-                                                            <td>Directrice</td>
-                                                            <td>DAL</td>
-                                                            <td>
-                                                                <a href="#!" class="btn btn-info btn-sm">Consulter attributions</a>
-                                                                <a href="#!" class="btn btn-danger btn-sm">Consulter tickets</a>
+                                                        <tr *ngFor="let client of allclients">
+                                                            <td class="align-middle">
+                                                                {{client.prenom}}
                                                             </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Elisabeth</td>
-                                                            <td>DIOUF</td>
-                                                            <td>elisabethdiouf@orange-sonatel.com</td>
-                                                            <td>772131399</td>
-                                                            <td>Directrice</td>
-                                                            <td>DAL</td>
+                                                            <td class="align-middle">
+                                                                {{client.nom}}
+                                                            </td>
+                                                            <td class="align-middle">
+                                                                {{client.telephone}}
+                                                            </td>
+                                                            <td class="align-middle">
+                                                                {{client.statut}}
+                                                            </td>
+                                                            <td class="align-middle">
+                                                                {{client.directionId}}
+                                                            </td>
                                                             <td>
                                                                 <a href="#!" class="btn btn-info btn-sm">Consulter attributions</a>
                                                                 <a href="#!" class="btn btn-danger btn-sm">Consulter tickets</a>
@@ -138,19 +122,8 @@
                             </div>
 
                             <!-- customar project  end -->
-
-                        </div>
-                    <!-- [ content ] End -->
-
-
-                </div>
-                <!-- [ Layout content ] Start -->
-            </div>
-            <!-- [ Layout container ] End -->
-        </div>
         <!-- Overlay -->
         <div class="layout-overlay layout-sidenav-toggle"></div>
-    </div>
     <!-- [ Layout wrapper] End -->
 
  

@@ -21,6 +21,7 @@ import { StatistiquesComponent } from './statistiques/statistiques.component';
 import { ComptabiliteComponent } from './comptabilite/comptabilite.component';
 import { ConfigurationComponent } from './configuration/configuration.component';
 import { CategorieVehiculeComponent } from './configuration/categorie-vehicule/categorie-vehicule.component';
+import { RoleComponent } from './role/role.component';
 
 
 const routes: Routes = [
@@ -50,6 +51,10 @@ const routes: Routes = [
       },
       {
         path: 'addVehicule',
+        component: AddVehiculeComponent,
+      },
+      {
+        path: 'modifierVehicule/:id',
         component: AddVehiculeComponent,
       },
       {
@@ -107,6 +112,10 @@ const routes: Routes = [
       {
         path: 'configuration/categorie-vehicule',
         component: CategorieVehiculeComponent,
+      },
+      {
+        path: 'role',
+        component: RoleComponent,
       }
     ]
   }

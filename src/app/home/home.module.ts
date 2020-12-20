@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {HomeRoutingModule} from './home-routing.module';
@@ -23,6 +24,16 @@ import { StatistiquesComponent } from './statistiques/statistiques.component';
 import { ComptabiliteComponent } from './comptabilite/comptabilite.component';
 import { ConfigurationComponent } from './configuration/configuration.component';
 import { CategorieVehiculeComponent } from './configuration/categorie-vehicule/categorie-vehicule.component';
+import { RoleComponent } from './role/role.component';
+import { MarqueVehiculeComponent } from './configuration/marque-vehicule/marque-vehicule.component';
+import { ModeleVehiculeComponent } from './configuration/modele-vehicule/modele-vehicule.component';
+import { ParkingVehiculeComponent } from './configuration/parking-vehicule/parking-vehicule.component';
+import { DirectionVehiculeComponent } from './configuration/direction-vehicule/direction-vehicule.component';
+import { DepannageVehiculeComponent } from './configuration/depannage-vehicule/depannage-vehicule.component';
+import { DossierTravailVehiculeComponent } from './configuration/dossier-travail-vehicule/dossier-travail-vehicule.component';
+import { FournisseurVehiculeComponent } from './configuration/fournisseur-vehicule/fournisseur-vehicule.component';
+import { CapexVehiculeComponent } from './comptabilite/capex-vehicule/capex-vehicule.component';
+import { OpexVehiculeComponent } from './comptabilite/opex-vehicule/opex-vehicule.component';
 
 
 
@@ -50,10 +61,21 @@ import { CategorieVehiculeComponent } from './configuration/categorie-vehicule/c
     ComptabiliteComponent,
     ConfigurationComponent,
     CategorieVehiculeComponent,
+    RoleComponent,
+    MarqueVehiculeComponent,
+    ModeleVehiculeComponent,
+    ParkingVehiculeComponent,
+    DirectionVehiculeComponent,
+    DepannageVehiculeComponent,
+    DossierTravailVehiculeComponent,
+    FournisseurVehiculeComponent,
+    CapexVehiculeComponent,
+    OpexVehiculeComponent,
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
+    FormsModule
   ],
   exports: [
     NavbarComponent,

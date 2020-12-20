@@ -1,8 +1,5 @@
  <!-- [ Layout content ] Start -->
- <div class="layout-content">
 
-    <!-- [ content ] Start -->
-    <div class="container-fluid flex-grow-1 container-p-y">
         <h4 class="font-weight-bold py-3 mb-0">Véhicule</h4>
         <div class="text-muted small mt-0 mb-4 d-block breadcrumb">
             <ol class="breadcrumb">
@@ -29,13 +26,13 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label class="form-label" for="Immatriculation">Immmatriculation</label>
-                                        <input type="text" class="form-control" id="Immatriculation" placeholder="">
+                                        <input type="text" [(ngModel)]="vehicule.immatriculation" name="immatriculation" class="form-control" id="Immatriculation" placeholder="">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group fill">
                                         <label class="form-label" for="Date de mise en circulation">Date de mise en circulation</label>
-                                        <input type="text" class="form-control" id="Date de mise en circulation" placeholder="">
+                                        <input type="date" [(ngModel)]="vehicule.dateDeMiseenCirculation" name="dateDeMiseenCirculation" class="form-control" id="Date de mise en circulation" placeholder="">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -112,6 +109,12 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
+                                        <label class="form-label" for="Parking">Parking d'attache</label>
+                                        <input type="text" class="form-control" id="Parking" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
                                         <label class="form-label" for="Etat">Etat</label>
                                         <select class="form-control" id="Etat">
                                             <option value=""></option>
@@ -120,13 +123,24 @@
                                         </select>
                                     </div>
                                 </div>
-                      
-                        <div class="col-sm-12">
-                            <button [routerLink]="['/home/listVehicule']" class="btn btn-primary">Submit</button>
-                            <button class="btn btn-danger">Clear</button>
-                        </div>
+                                <div class="col-sm-7">
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Description</label>
+                                        <textarea id="tinymce-editor"></textarea><br>
+                                        <label class="file btn waves-effect waves-light btn-outline-primary mt-3 file-btn" for="flup">
+                                            <i class="feather icon-paperclip"></i>Add Atachment
+                                            <input type="file" name="file"  class="d-none" id="flup"/>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <button (click)="postVehicules()" class="btn btn-primary">Submit</button>
+                                    <button class="btn btn-danger">Clear</button>
+                                </div>
+                            </div>
+                     </form>
                     </div>
-                </form>
+                </div>
             </div>
-    </div>
-</div>
+        </div>
+

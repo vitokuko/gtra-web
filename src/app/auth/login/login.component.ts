@@ -58,7 +58,7 @@ export class LoginComponent implements OnInit {
           this.authService.redirect('accueil');
           this.showSuccess(`Bienvenue dans votre Espace de Travail`, 'Authentification');
           // get the account roles
-          /* this.dataService.get('Accounts/' + this.authService.getCurrentAccount().id + '/roles')
+          this.dataService.get('Accounts/' + this.authService.getCurrentAccount().id + '/roles')
             .then(
               (roles: any) => {
                 // création roles on localstorage
@@ -115,7 +115,7 @@ export class LoginComponent implements OnInit {
                 this.loader = false;
                 console.log(err);
               }
-            ); */
+            );
         },
         err => {
           this.showError('Identifiants incorrects. Veuillez réessayer', 'Authentification');

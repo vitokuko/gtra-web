@@ -1,0 +1,106 @@
+<h4 class="font-weight-bold py-3 mb-0">Role</h4>
+<div class="text-muted small mt-0 mb-4 d-block breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#"><i class="feather icon-home"></i></a></li>
+        <li class="breadcrumb-item"><a href="#!">Gestion des Roles</a></li>
+        <li class="breadcrumb-item active"><a href="#!">Role</a></li>
+    </ol>
+</div>
+<div class="row">
+    <!-- subscribe start -->
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5>Listes des roles </h5>
+            </div>
+            <div class="card-body">
+                <div class="row align-items-center m-l-0">
+                    <div class="col-sm-6">
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        <button class="btn btn-success btn-sm mb-3 btn-round" data-toggle="modal" data-target="#modal-report"><i class="feather icon-plus"></i> Ajouter</button>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table id="report-table" class="table table-bordered table-striped mb-0">
+                        <thead>
+                            <tr>
+                                <th>Description</th>
+                                <th>Date de création</th>
+                                <th>Date de modification</th>
+                                <th>Options</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Role d'admin</td>
+                                <td>17/09/2020</td>
+                                <td>17/09/2020</td>
+                                <td>
+                                    <a href="#!" class="btn btn-info btn-sm">Edit</a>
+                                    <a href="#!" class="btn btn-danger btn-sm">Delete</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- subscribe end -->
+</div>
+
+<!-- Overlay -->
+<div class="layout-overlay layout-sidenav-toggle"></div>
+
+<!-- [ Layout wrapper] End -->
+<div class="modal fade" id="modal-report" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-xl">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Roles</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<form>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="floating-label" for="Name">Name</label>
+            <input type="text" class="form-control" id="Name" placeholder="">
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group fill">
+            <label class="floating-label" for="Email">Email</label>
+            <input type="email" class="form-control" id="Email" placeholder="">
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group fill">
+            <label class="floating-label" for="Password">Password</label>
+            <input type="password" class="form-control" id="Password" placeholder="">
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="floating-label" for="Rollno">Contact</label>
+            <input type="text" class="form-control" id="Rollno" placeholder="">
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="form-group">
+            <label class="floating-label" for="Address">Address</label>
+            <textarea class="form-control" id="Address" rows="3"></textarea>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <button class="btn btn-primary">Submit</button>
+        <button class="btn btn-danger">Clear</button>
+    </div>
+</div>
+</form>
+</div>
+</div>
