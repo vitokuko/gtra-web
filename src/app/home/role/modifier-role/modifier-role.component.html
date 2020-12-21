@@ -1,0 +1,44 @@
+<div class="modal fade" id="modal-report" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+    <div class="modal-header">
+    <h5 class="modal-title">Roles</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    <div class="modal-body">
+    <form>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="floating-label" for="Name">Nom</label>
+                <input type="text" [(ngModel)]="role.name" name="nom" class="form-control" id="Name" placeholder="">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group fill">
+                <label class="floating-label" for="Description">Description</label>
+                <input type="text" [(ngModel)]="role.description" name="description" class="form-control" id="Description" placeholder="">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group fill">
+                <label class="floating-label" for="Description">Date de création</label>
+                <input type="date" [(ngModel)]="role.created" name="dateCreation" class="form-control" id="dateCreation" placeholder="">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group fill">
+                <label class="floating-label" for="Description">Date de modification</label>
+                <input type="date" [(ngModel)]="role.modified" name="dateModification" class="form-control" id="dateModification" placeholder="">
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <button  (click)="patchRole(role.id)" class="btn btn-primary">Submit</button>
+            <button class="btn btn-danger">Clear</button>
+        </div>
+    </div>
+    </form>
+    </div>
+    </div>

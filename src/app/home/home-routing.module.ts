@@ -22,6 +22,12 @@ import { ComptabiliteComponent } from './comptabilite/comptabilite.component';
 import { ConfigurationComponent } from './configuration/configuration.component';
 import { CategorieVehiculeComponent } from './configuration/categorie-vehicule/categorie-vehicule.component';
 import { RoleComponent } from './role/role.component';
+import { ModifierClientComponent } from './client/modifier-client/modifier-client.component';
+import { ModifierAdminComponent } from  './admin/modifier-admin/modifier-admin.component';
+import { ModifierRoleComponent } from './role/modifier-role/modifier-role.component';
+import { ConsulterAttributionClientComponent } from './gestion-clients/consulter-attribution-client/consulter-attribution-client.component';
+import { ConsulterTicketClientComponent } from './gestion-clients/consulter-ticket-client/consulter-ticket-client.component';
+
 
 
 const routes: Routes = [
@@ -42,8 +48,16 @@ const routes: Routes = [
         component: ClientComponent,
       },
       {
+        path: 'modifierClient',
+        component: ModifierClientComponent,
+      },
+      {
         path: 'admin',
         component: AdminComponent,
+      },
+      {
+        path: 'modifierAdmin',
+        component: ModifierAdminComponent,
       },
       {
         path: 'listVehicule',
@@ -82,6 +96,14 @@ const routes: Routes = [
         component: GestionClientsComponent,
       },
       {
+        path: 'consulterAttributionClient',
+        component: ConsulterAttributionClientComponent,
+      },
+      {
+        path: 'consulterTicketClient',
+        component: ConsulterTicketClientComponent,
+      },
+      {
         path: 'gestionVehicules',
         component: GestionVehiculesComponent,
       },
@@ -116,6 +138,10 @@ const routes: Routes = [
       {
         path: 'role',
         component: RoleComponent,
+      },
+      {
+        path: 'modifierRole',
+        component: ModifierRoleComponent,
       }
     ]
   }

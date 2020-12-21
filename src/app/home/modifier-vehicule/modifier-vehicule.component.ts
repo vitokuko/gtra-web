@@ -1,39 +1,33 @@
 import { Component, OnInit } from '@angular/core';
-import { Vehicule } from 'src/app/models/vehicule';
 import { ToastrService } from 'ngx-toastr';
-import { Categorie } from './../../models/categorie';
+import { Vehicule } from 'src/app/models/vehicule';
 import {DataService} from '../../shared/data/data.service';
 
 @Component({
-  selector: 'app-add-vehicule',
-  templateUrl: './add-vehicule.component.html',
-  styleUrls: ['./add-vehicule.component.css']
+  selector: 'app-modifier-vehicule',
+  templateUrl: './modifier-vehicule.component.html',
+  styleUrls: ['./modifier-vehicule.component.css']
 })
-export class AddVehiculeComponent implements OnInit {
+export class ModifierVehiculeComponent implements OnInit {
+  title = 'List vehicules';
+  allvehicules: Vehicule[] = [];
 
-  title = 'Add vehicules';
+
   vehicule: Vehicule = new Vehicule();
-  vehicules: Vehicule[] = [];
-
-
-  categorie: Categorie[] = [];
-
 
   constructor(private dataService: DataService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
-    this.postVehicules();
   }
 
-
-  postVehicules(): void {
-    this.dataService.post('Vehicules' , this.vehicule)
+  patchVehicules(): void {
+    this.dataService.patch('Vehicules', 'id', this.vehicule)
     .then(
       (res: any) => {
-        console.log(res);
         this.vehicule = res;
-        console.log('add : ', res)
-        this.showSuccess('Vehicule ajouté avec succés !', 'Ajout');
+        console.log('patch : ', res)
+        this.showSuccess('Vehicule modifié avec succés !', 'Modification');
+    
       },
       err => {
         console.log(err);

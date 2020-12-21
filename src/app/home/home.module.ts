@@ -34,6 +34,12 @@ import { DossierTravailVehiculeComponent } from './configuration/dossier-travail
 import { FournisseurVehiculeComponent } from './configuration/fournisseur-vehicule/fournisseur-vehicule.component';
 import { CapexVehiculeComponent } from './comptabilite/capex-vehicule/capex-vehicule.component';
 import { OpexVehiculeComponent } from './comptabilite/opex-vehicule/opex-vehicule.component';
+import { ModifierVehiculeComponent } from './modifier-vehicule/modifier-vehicule.component';
+import { ModifierClientComponent } from './client/modifier-client/modifier-client.component';
+import { ModifierAdminComponent } from './admin/modifier-admin/modifier-admin.component';
+import { ModifierRoleComponent } from './role/modifier-role/modifier-role.component';
+import { ConsulterAttributionClientComponent } from './gestion-clients/consulter-attribution-client/consulter-attribution-client.component';
+import { ConsulterTicketClientComponent } from './gestion-clients/consulter-ticket-client/consulter-ticket-client.component';
 
 
 
@@ -71,6 +77,12 @@ import { OpexVehiculeComponent } from './comptabilite/opex-vehicule/opex-vehicul
     FournisseurVehiculeComponent,
     CapexVehiculeComponent,
     OpexVehiculeComponent,
+    ModifierVehiculeComponent,
+    ModifierClientComponent,
+    ModifierAdminComponent,
+    ModifierRoleComponent,
+    ConsulterAttributionClientComponent,
+    ConsulterTicketClientComponent,
   ],
   imports: [
     CommonModule,

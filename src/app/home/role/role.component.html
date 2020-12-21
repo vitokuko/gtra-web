@@ -25,6 +25,7 @@
                     <table id="report-table" class="table table-bordered table-striped mb-0">
                         <thead>
                             <tr>
+                                <th>Nom </th>
                                 <th>Description</th>
                                 <th>Date de création</th>
                                 <th>Date de modification</th>
@@ -32,13 +33,14 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Role d'admin</td>
-                                <td>17/09/2020</td>
-                                <td>17/09/2020</td>
+                            <tr *ngFor="let role of allroles"> 
+                                <td>  {{role.name}}</td>
+                                <td> {{role.description}} </td>
+                                <td> {{role.created}} </td>
+                                <td> {{role.modified}} </td>
                                 <td>
-                                    <a href="#!" class="btn btn-info btn-sm">Edit</a>
-                                    <a href="#!" class="btn btn-danger btn-sm">Delete</a>
+                                    <a  [routerLink]="['/home/modifierRole, role.id']" class="btn btn-icon btn-outline-success"><i class="feather icon-edit"></i></a>
+                                    <a class="btn btn-icon btn-outline-danger"><i class="feather icon-trash-2" (click)="deleteRole(role.id)"></i></a>
                                 </td>
                             </tr>
                         </tbody>
@@ -68,36 +70,30 @@
 <div class="row">
     <div class="col-sm-6">
         <div class="form-group">
-            <label class="floating-label" for="Name">Name</label>
-            <input type="text" class="form-control" id="Name" placeholder="">
+            <label class="floating-label" for="Name">Nom</label>
+            <input type="text" [(ngModel)]="role.name" name="nom" class="form-control" id="Name" placeholder="">
         </div>
     </div>
     <div class="col-sm-6">
         <div class="form-group fill">
-            <label class="floating-label" for="Email">Email</label>
-            <input type="email" class="form-control" id="Email" placeholder="">
+            <label class="floating-label" for="Description">Description</label>
+            <input type="text" [(ngModel)]="role.description" name="description" class="form-control" id="Email" placeholder="">
         </div>
     </div>
     <div class="col-sm-6">
         <div class="form-group fill">
-            <label class="floating-label" for="Password">Password</label>
-            <input type="password" class="form-control" id="Password" placeholder="">
+            <label class="floating-label" for="Description">Date de création</label>
+            <input type="date" [(ngModel)]="role.created" name="dateCreation" class="form-control" id="Email" placeholder="">
         </div>
     </div>
     <div class="col-sm-6">
-        <div class="form-group">
-            <label class="floating-label" for="Rollno">Contact</label>
-            <input type="text" class="form-control" id="Rollno" placeholder="">
+        <div class="form-group fill">
+            <label class="floating-label" for="Description">Date de modification</label>
+            <input type="date" [(ngModel)]="role.modified" name="dateModification" class="form-control" id="Email" placeholder="">
         </div>
     </div>
     <div class="col-sm-12">
-        <div class="form-group">
-            <label class="floating-label" for="Address">Address</label>
-            <textarea class="form-control" id="Address" rows="3"></textarea>
-        </div>
-    </div>
-    <div class="col-sm-12">
-        <button class="btn btn-primary">Submit</button>
+        <button  (click)="postRole()" class="btn btn-primary">Submit</button>
         <button class="btn btn-danger">Clear</button>
     </div>
 </div>

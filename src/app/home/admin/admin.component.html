@@ -29,8 +29,8 @@
                                                     <tr>
                                                         <th>Prénom</th>
                                                         <th>Nom</th>
-                                                        <th>Email</th>
                                                         <th>Téléphone</th>
+                                                        <th>Direction</th>
                                                         <th>Options</th>
                                                     </tr>
                                                 </thead>
@@ -46,14 +46,11 @@
                                                             {{admin.telephone}}
                                                         </td>
                                                         <td class="align-middle">
-                                                            {{admin.statut}}
-                                                        </td>
-                                                        <td class="align-middle">
-                                                            {{admin.directionId}}
+                                                            {{ (admin && admin.direction)? admin.direction.libelle : '-'}}
                                                         </td>
                                                        <td class="table-action">
-                                                        <a href="#" class="btn btn-icon btn-outline-success"><i class="feather icon-edit"></i></a>
-                                                        <a class="btn btn-icon btn-outline-danger"><i class="feather icon-trash-2"></i></a>
+                                                        <a [routerLink]="['/home/admin/modifierAdmin, admin.id']" class="btn btn-icon btn-outline-success"><i class="feather icon-edit"></i></a>
+                                                        <a class="btn btn-icon btn-outline-danger"><i class="feather icon-trash-2" (click)="deleteAdmin(admin.id)"></i></a>
                                                     </td>
                                                     </tr>
                                                 </tbody>
@@ -84,29 +81,31 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label class="floating-label" for="Prenom">Prénom</label>
-                                    <input type="text" class="form-control" id="Prenom" placeholder="">
+                                    <input type="text" [(ngModel)]="admin.prenom" name="prenom" class="form-control" id="Prenom" placeholder="">
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label class="floating-label" for="Nom">Nom</label>
-                                    <input type="text" class="form-control" id="Nom" placeholder="">
+                                    <input type="text" [(ngModel)]="admin.nom" name="nom" class="form-control" id="Nom" placeholder="">
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="form-group fill">
-                                    <label class="floating-label" for="Email">Email</label>
-                                    <input type="email" class="form-control" id="Email" placeholder="">
-                                </div>
-                            </div>
+            
                             <div class="col-sm-6">
                                 <div class="form-group fill">
                                     <label class="floating-label" for="Telephone">Téléphone</label>
-                                    <input type="text" class="form-control" id="Telephone" placeholder="">
+                                    <input type="text" [(ngModel)]="admin.telephone" name="telephone" class="form-control" id="Telephone" placeholder="">
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label class="floating-label" for="Direction">Direction</label>
+                                    <input type="text" [(ngModel)]="admin.direction" name="direction" class="form-control" id="Direction" placeholder="">
                                 </div>
                             </div>
                             <div class="col-sm-12">
-                                <button class="btn btn-primary">Submit</button>
+                                <button (click)="postAdmins()" class="btn btn-primary">Submit</button>
                                 <button class="btn btn-danger">Clear</button>
                             </div>
                         </div>

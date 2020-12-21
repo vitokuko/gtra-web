@@ -117,7 +117,7 @@
                                                         {{ (vehicule && vehicule.parking)? vehicule.parking.libelle : '-'}}
                                                     </td>
                                                     <td class="table-action">
-                                                        <a href="#" class="btn btn-icon btn-outline-success"><i class="feather icon-edit"></i></a>
+                                                        <a  [routerLink]="['/home/modifierVehicule, vehicule.id']" class="btn btn-icon btn-outline-success"><i class="feather icon-edit" ></i></a>
                                                         <a class="btn btn-icon btn-outline-danger"><i class="feather icon-trash-2" (click)="deleteVehicule(vehicule.id)"></i></a>
                                                     </td>
                                                 </tr>
