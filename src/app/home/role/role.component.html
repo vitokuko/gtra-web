@@ -39,7 +39,7 @@
                                 <td> {{role.created}} </td>
                                 <td> {{role.modified}} </td>
                                 <td>
-                                    <a  [routerLink]="['/home/modifierRole, role.id']" class="btn btn-icon btn-outline-success"><i class="feather icon-edit"></i></a>
+                                    <a  [routerLink]="['/home/modifierRole']"[queryParams]="{id:'role'}"queryParamHandling="merge" class="btn btn-icon btn-outline-success"><i class="feather icon-edit"></i></a>
                                     <a class="btn btn-icon btn-outline-danger"><i class="feather icon-trash-2" (click)="deleteRole(role.id)"></i></a>
                                 </td>
                             </tr>

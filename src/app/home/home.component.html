@@ -2,27 +2,35 @@
 <div class="layout-wrapper layout-1 layout-without-sidenav">
   <div class="layout-inner">
     <app-header></app-header>
-    <app-navbar></app-navbar>
+    
     <!-- [ Layout container ] Start -->
     <div class="layout-container">
       <!-- [ Layout content ] Start -->
       <div class="layout-content">
 
         <!-- [ content ] Start -->
-        <div class="container flex-grow-1 container-p-y">
+        <div class="container-fluid flex-grow-1 container-p-y">
+          <div class="row">
+          <div  class="col-2" >
+          
+            <app-navbar ></app-navbar>
+          </div>
+          <div class="col-10">
           <router-outlet></router-outlet>
+        </div>
+        
         </div>
         <!-- [ content ] End -->
         <!-- [ Layout footer ] Start -->
-        <nav class="layout-footer footer footer-light">
-                            <div class="container-fluid d-flex flex-wrap justify-content-between text-center container-p-x pb-3">
-                                <div class="pt-3">
-                                    <span class="float-md-right d-none d-lg-block">&copy; DAL/IMMO-TR/TRA &amp; Made by END with <i class="fas fa-heart text-danger mr-2"></i></span>
-                                </div>
-                            </div>
-        </nav>
+        <footer class="layout-footer footer footer-light">
+          <div class="container-fluid d-flex flex-wrap justify-content-between text-center container-p-x pb-3">
+              <div class="pt-3">
+                  <span class="float-md-right d-none d-lg-block">&copy; DAL/IMMO-TR/TRA &amp; Made by END with <i class="fas fa-heart text-danger mr-2"></i></span>
+              </div>
+          </div>
+        </footer>
                         <!-- [ Layout footer ] End -->
-
+                       
       </div>
       <!-- [ Layout content ] Start -->
     </div>
@@ -30,6 +38,7 @@
   </div>
   <!-- Overlay -->
   <div class="layout-overlay layout-sidenav-toggle"></div>
+  
 </div>
 <!-- [ Layout wrapper] End -->
  

@@ -1,70 +1,68 @@
  <!-- [ Layout sidenav ] Start -->
 
- <nav class="layout-navbar navbar navbar-expand-lg align-items-lg-center bg-dark" id="layout-navbar">
+  <div class="sidenav bg-primary">
+    <div id="layout-sidenav" class="layout-sidenav sidenav sidenav-vertical bg-white logo-dark" style="min-height: 100vh; width: auto;">
+      <div class="sidenav-divider mt-0"></div>
 
-  <div class="sidenav bg-dark">
-    <div id="layout-sidenav" class="container layout-sidenav-horizontal sidenav-horizontal flex-grow-0 bg-dark sidenav">
-      <div class="container">
-        <!-- Nav items -->
-          <ul class="navbar-nav">
-              <!-- Dashboards -->
-            <li class="nav-item ">
-              <a class="nav-link" href="javascript:" [routerLink]="['/home/accueil']" class="sidenav-link">
-                <i class="sidenav-icon feather icon-home"></i>
-                <div>Tableau de bord</div>
+      <!-- Links -->
+      <ul class="sidenav-inner py-1">
+
+          <!-- Dashboards -->
+          <li class="sidenav-item ">
+              <a href="javascript:" [routerLink]="['/home/accueil']" class="sidenav-link">
+                <i class="sidenav-icon feather icon-home "></i>
+                <div class="size">Tableau de bord</div>
               </a>
             </li>
             <li class="sidenav-item">
               <a [routerLink]="['/home/gestionVehicules']" class="sidenav-link ">
                   <i class="sidenav-icon feather icon-book"></i>
-                  <div>Gestion des Vehicules</div>
+                  <div class="size">Gestion Vehicules</div>
               </a>
             </li>
             <li class="sidenav-item">
               <a [routerLink]="['/home/ticketList']" class="sidenav-link">
                 <i class="sidenav-icon feather icon-shield"></i>
-                <div>Tickets</div>
+                <div class="size">Tickets</div>
               </a>
             </li>
             <li class="sidenav-item">
               <a [routerLink]="['/home/gestionClients']" class="sidenav-link">
                 <i class="sidenav-icon feather icon-users"></i>
-                <div> Gestion des clIents</div>
+                <div class="size"> Gestion clients</div>
               </a>
             </li>
             <li class="sidenav-item">
               <a [routerLink]="['/home/statistiques']" class="sidenav-link">
                 <i class='sidenav-icon fas fa-chart-bar fa-lg'></i>
-                <div> Statistiques</div>
+                <div class="size"> Statistiques</div>
               </a>
             </li>
             <li class="sidenav-item">
               <a [routerLink]="['/home/comptabilite']" class="sidenav-link">
                 <i class='sidenav-icon fas fa-landmark'></i>
-                <div> Charges</div>
+                <div class="size"> Charges</div>
               </a>
             </li>
             <li class="sidenav-item">
               <a href="javascript:" class="sidenav-link sidenav-toggle">
                   <i class="sidenav-icon feather icon-settings"></i>
-                  <div> Paramètre</div>
+                  <div class="size"> Paramètre</div>
               </a>
               <ul class="sidenav-menu">
                   <li class="sidenav-item "><a [routerLink]="['/home/utilisateur']" class="sidenav-link">
-                          <div> Utilisateur</div>
+                          <div class="size"> Utilisateur</div>
                       </a></li>
                   <li class="sidenav-item"><a [routerLink]="['/home/role']" class="sidenav-link">
-                          <div> Role</div>
+                          <div class="size"> Role</div>
                       </a></li>
                   <li class="sidenav-item"><a [routerLink]="['/home/Configuration']" class="sidenav-link">
-                          <div> Configuration</div>
+                          <div class="size"> Configuration</div>
                       </a></li>
               </ul>
             </li>
           </ul>
       </div>
 </div>
-</div>
 
 <!-- [ Layout sidenav ] End -->
-</nav>

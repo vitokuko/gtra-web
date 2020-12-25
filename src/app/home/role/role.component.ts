@@ -44,7 +44,7 @@ export class RoleComponent implements OnInit {
       (res: any) => {
         console.log('delete : ', res)
         this.showSuccess('Role supprimé avec succés !', 'Suppression');
-        this.getAllRoles();
+      
       
       },
       err => {

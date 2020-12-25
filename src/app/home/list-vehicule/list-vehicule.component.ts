@@ -23,7 +23,7 @@ export class ListVehiculeComponent implements OnInit {
     this.getAllCategories();
   }
 
-  getAllCategories() {
+ getAllCategories() {
     this.dataService.get(`Categories`)
       .then(
         (res: Categorie[]) => {
@@ -33,7 +33,7 @@ export class ListVehiculeComponent implements OnInit {
         err => {
           console.log(err);
         }
-      );
+      ); 
   }
 
   getAllVehiculesByCategorie(idCategorie: string): void {
@@ -49,7 +49,7 @@ export class ListVehiculeComponent implements OnInit {
   }
 
   patchVehicules(): void {
-    this.dataService.patch('Vehicules', 'id', 'data')
+    this.dataService.patch('Vehicule', 'id', 'data')
     .then(
       (res: any) => {
         this.vehicule = res;
@@ -61,7 +61,7 @@ export class ListVehiculeComponent implements OnInit {
   }
 
   deleteVehicule(vehiculeId: string): void {
-    this.dataService.delete('Vehicules', vehiculeId)
+    this.dataService.delete('Vehicule', vehiculeId)
     .then(
       (res: any) => {
         console.log('delete : ', res)

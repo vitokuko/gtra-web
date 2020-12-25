@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DossierTravails } from 'src/app/models/dossiertravails';
 import {DataService} from '../../shared/data/data.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-ticket-list',
@@ -14,9 +15,7 @@ export class TicketListComponent implements OnInit {
 
   dossiertravail: DossierTravails = new DossierTravails();
 
-  id = typeof this.dossiertravail=== 'number' ? this.dossiertravail : this.dossiertravail.id;
-
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.getAllTickets();
@@ -33,5 +32,46 @@ export class TicketListComponent implements OnInit {
           console.log(err);
         }
       );
+  }
+
+  patchTicket(): void {
+    this.dataService.patch('DossierTravails', 'id', 'data')
+    .then(
+      (res: any) => {
+        this.dossiertravail = res;
+        this.getAllTickets();
+      },
+      err => {
+        console.log(err);
+      }
+    );
+  }
+
+  deleteTicket(dossiertravailId: string): void {
+    this.dataService.delete('DossierTravails', dossiertravailId)
+    .then(
+      (res: any) => {
+        console.log('delete : ', res)
+        this.showSuccess('Ticket supprimé avec succés !', 'Suppression');
+        this.getAllTickets();
+      },
+      err => {
+        console.log(err);
+      }
+    );
+  }
+
+  showSuccess(message, title) {
+    this.toastr.success(message, title, {
+      timeOut: 3000,
+      positionClass: 'toast-top-right'
+    });
+  }
+
+  showError(message, title) {
+    this.toastr.error(message, title, {
+      timeOut: 3000,
+      positionClass: 'toast-top-right'
+    });
   }
 }
