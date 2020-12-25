@@ -6,10 +6,6 @@
 	list-style-type: none;
 	display: inline-block; 
 	
-	
-}
-#layout-sidenav ul li:hover {             
-
 }
 #layout-sidenav ul li:hover ul{
 	display: block;
@@ -18,12 +14,7 @@
 
 #layout-sidenav ul li li {
 
-	width: 150px;
-}
-
-#container ul li {
-    width: 900px;
-    
+	width: 250px;
 }
 .size{
 	font-size: large;
