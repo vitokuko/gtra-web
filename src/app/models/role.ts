@@ -6,7 +6,9 @@ export class Role {
         public itemName?: string,
         public description?: string,
         public created?: Date,
-        public modified?: Date) {
+        public modified?: Date,
+        
+        ) {
 
     }
 }

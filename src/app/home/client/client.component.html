@@ -28,7 +28,6 @@
                                                     <tr>
                                                         <th>Prénom</th>
                                                         <th>Nom</th>
-                                                        <th>Email</th>
                                                         <th>Téléphone</th>
                                                         <th>Statut</th>
                                                         <th>Direction</th>
@@ -36,77 +35,26 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <td>Elisabeth</td>
-                                                        <td>DIOUF</td>
-                                                        <td>elisabethdiouf@orange-sonatel.com</td>
-                                                        <td>772131399</td>
-                                                        <td>Directrice</td>
-                                                        <td>DAL</td>
-                                                        <td>
-                                                            <a href="#!" class="btn btn-info btn-sm">Editer</a>
-                                                            <a href="#!" class="btn btn-danger btn-sm">Supprimer</a>
+                                                    <tr *ngFor="let client of allclients">
+                                                        <td class="align-middle">
+                                                            {{client.prenom}}
                                                         </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Elisabeth</td>
-                                                        <td>DIOUF</td>
-                                                        <td>elisabethdiouf@orange-sonatel.com</td>
-                                                        <td>772131399</td>
-                                                        <td>Directrice</td>
-                                                        <td>DAL</td>
-                                                        <td>
-                                                            <a href="#!" class="btn btn-info btn-sm">Editer</a>
-                                                            <a href="#!" class="btn btn-danger btn-sm">Supprimer</a>
+                                                        <td class="align-middle">
+                                                            {{client.nom}}
                                                         </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Elisabeth</td>
-                                                        <td>DIOUF</td>
-                                                        <td>elisabethdiouf@orange-sonatel.com</td>
-                                                        <td>772131399</td>
-                                                        <td>Directrice</td>
-                                                        <td>DAL</td>
-                                                        <td>
-                                                            <a href="#!" class="btn btn-info btn-sm">Editer</a>
-                                                            <a href="#!" class="btn btn-danger btn-sm">Supprimer</a>
+                                                        <td class="align-middle">
+                                                            {{client.telephone}}
                                                         </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Elisabeth</td>
-                                                        <td>DIOUF</td>
-                                                        <td>elisabethdiouf@orange-sonatel.com</td>
-                                                        <td>772131399</td>
-                                                        <td>Directrice</td>
-                                                        <td>DAL</td>
-                                                        <td>
-                                                            <a href="#!" class="btn btn-info btn-sm">Editer</a>
-                                                            <a href="#!" class="btn btn-danger btn-sm">Supprimer</a>
+                                                        <td class="align-middle">
+                                                            {{client.statut}}
                                                         </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Elisabeth</td>
-                                                        <td>DIOUF</td>
-                                                        <td>elisabethdiouf@orange-sonatel.com</td>
-                                                        <td>772131399</td>
-                                                        <td>Directirce</td>
-                                                        <td>DAL</td>
-                                                        <td>
-                                                            <a href="#!" class="btn btn-info btn-sm">Editer</a>
-                                                            <a href="#!" class="btn btn-danger btn-sm">Supprimer</a>
+                                                        <td class="align-middle">
+                                                            {{ (client && client.direction)? client.direction.libelle : '-'}}
                                                         </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Elisabeth</td>
-                                                        <td>DIOUF</td>
-                                                        <td>elisabethdiouf@orange-sonatel.com</td>
-                                                        <td>772131399</td>
-                                                        <td>Directrice</td>
-                                                        <td>DAL</td>
-                                                        <td>
-                                                            <a href="#!" class="btn btn-info btn-sm">Editer</a>
-                                                            <a href="#!" class="btn btn-danger btn-sm">Supprimer</a>
-                                                        </td>
+                                                       <td class="table-action">
+                                                        <a [routerLink]="['/home/client/modifierClient, client.id']" class="btn btn-icon btn-outline-success"><i class="feather icon-edit"></i></a>
+                                                        <a class="btn btn-icon btn-outline-danger"><i class="feather icon-trash-2" (click)="deleteClient(client.id)"></i></a>
+                                                    </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -136,41 +84,36 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label class="floating-label" for="Prenom">Prénom</label>
-                                    <input type="text" class="form-control" id="Prenom" placeholder="">
+                                    <input type="text" [(ngModel)]="client.prenom" name="prenom" class="form-control" id="Prenom" placeholder="">
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label class="floating-label" for="Nom">Nom</label>
-                                    <input type="text" class="form-control" id="Nom" placeholder="">
+                                    <input type="text" [(ngModel)]="client.nom" name="nom" class="form-control" id="Nom" placeholder="">
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="form-group fill">
-                                    <label class="floating-label" for="Email">Email</label>
-                                    <input type="email" class="form-control" id="Email" placeholder="">
-                                </div>
-                            </div>
+            
                             <div class="col-sm-6">
                                 <div class="form-group fill">
                                     <label class="floating-label" for="Telephone">Téléphone</label>
-                                    <input type="text" class="form-control" id="Telephone" placeholder="">
+                                    <input type="text" [(ngModel)]="client.telephone" name="telephone" class="form-control" id="Telephone" placeholder="">
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label class="floating-label" for="Statut">Statut</label>
-                                    <input type="text" class="form-control" id="Statut" placeholder="">
+                                    <input type="text" [(ngModel)]="client.statut" name="statut" class="form-control" id="Statut" placeholder="">
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label class="floating-label" for="Direction">Direction</label>
-                                    <input type="text" class="form-control" id="Direction" placeholder="">
+                                    <input type="text" [(ngModel)]="client.direction" name="direction" class="form-control" id="Direction" placeholder="">
                                 </div>
                             </div>
                             <div class="col-sm-12">
-                                <button class="btn btn-primary">Submit</button>
+                                <button (click)="postClients()" class="btn btn-primary">Submit</button>
                                 <button class="btn btn-danger">Clear</button>
                             </div>
                         </div>

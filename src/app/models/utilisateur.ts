@@ -1,4 +1,5 @@
 import { Account } from './account';
+import { Direction } from './direction';
 
 export class Utilisateur {
     constructor(
@@ -10,6 +11,7 @@ export class Utilisateur {
         public actif?: boolean,
         public accounts?: Account,
         public directionId?: string,
+        public direction?: Direction,
     ) {
     }
 }

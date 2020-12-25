@@ -3,6 +3,33 @@
   flex-basis: 100%;
   min-height: 100vh;
   width: 100%; }
+  .avatar {
+    vertical-align: middle;
+    align-items: center;
+    height: 24%;
+    width: auto;
+    border-radius: 80%;
+  }
+  .padding{
+    padding-top: 7%;
+  }
+  .orange{
+    color:#ff4a00;
+  }
+  .label{
+    font-size: 24px;
+  }
+  .oublier{
+    font-size: 20px;
+  }
+  .connexion{
+    padding-top: 8%;
+    padding-bottom: 8%;
+  }
+  .motDePass{
+    
+    padding-top: 10%;
+  }
 .authentication-wrapper .authentication-inner {
   width: 100%; }
 .authentication-wrapper.authentication-1, .authentication-wrapper.authentication-2, .authentication-wrapper.authentication-4 {

@@ -1,218 +1,214 @@
+<h4 class="font-weight-bold py-3 mb-0 display-3">Tableau de bord</h4>
+<div class="text-muted small mt-0 mb-4 d-block breadcrumb">
+    <ol class="breadcrumb display-5">
+        <li class="breadcrumb-item"><a href="#"><i class="feather icon-home"></i></a></li>
+        <li class="breadcrumb-item"><a [routerLink]="['/home/acceuil']">tableau de bord</a></li>
+        <li class="breadcrumb-item active">Accueil</li>
+    </ol>
+</div>
+<div class="row">
+    <!-- Staustic card 9 Start -->
+    <div class="col-xl-3 col-md-6">
+        <div class="card mb-4">
+            <div class="progress bg-white">
+                <div class="progress-bar bg-primary" style="width:56%"></div>
+            </div>
+            <div class="card-body">
+                <h5>Vehicules VEX</h5>
+                <div class="text-center">
+                    <span class="d-block text-primary display-3">56</span>
+                    <p class="mb-0">Total</p>
+                </div>
+            </div>
+            <div class="card-footer bg-primary bg-pattern-2">
+                <h6 class="text-white mb-0">Attribués: 22 Disponibles: 22</h6>
 
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="card mb-4">
+            <div class="progress bg-white">
+                <div class="progress-bar bg-success" style="width:14%"></div>
+            </div>
+            <div class="card-body">
+                <h5>Vehicules VSC</h5>
+                <div class="text-center">
+                    <span class="d-block text-success display-3">14</span>
+                    <p class="mb-0">Total</p>
+                </div>
+            </div>
+            <div class="card-footer bg-success bg-pattern-2">
+                <h6 class="text-white mb-0">Attribués: 22 Disponibles: 22</h6>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="card mb-4">
+            <div class="progress bg-white">
+                <div class="progress-bar bg-danger" style="width:85%"></div>
+            </div>
+            <div class="card-body">
+                <h5>Tickets</h5>
+                <div class="text-center">
+                    <span class="d-block text-danger display-3">85</span>
+                    <p class="mb-0">Total</p>
+                </div>
+            </div>
+            <div class="card-footer bg-danger  bg-pattern-2">
+                <h6 class="text-white mb-0">Traités: 85</h6>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="card mb-4">
+            <div class="progress bg-white">
+                <div class="progress-bar bg-warning" style="width:42%"></div>
+            </div>
+            <div class="card-body">
+                <h5>Tickets en cours</h5>
+                <div class="text-center">
+                    <span class="d-block text-warning display-3">42</span>
+                    <p class="mb-0">Total</p>
+                </div>
+            </div>
+            <div class="card-footer bg-warning  bg-pattern-2">
+                <h6 class="text-white mb-0">En cours: 42</h6>
+            </div>
+        </div>
+    </div>
+    <!-- Staustic card 9 end -->
 
-                        <h4 class="font-weight-bold py-3 mb-0">Tableau de bord</h4>
-                        <div class="text-muted small mt-0 mb-4 d-block breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#"><i class="feather icon-home"></i></a></li>
-                                <li class="breadcrumb-item"><a [routerLink]="['/home/acceuil']">tableau de bord</a></li>
-                                <li class="breadcrumb-item active">Accueil</li>
-                            </ol>
+    <!-- [ Staustic widgets ] End -->
+</div>
+
+<!-- [ content ] End -->
+<div class="row">
+    <!-- Chart card 14 Start -->
+    <div class="col-xl-6">
+        <div class="card mb-4">
+            <div class="card-header with-elements">
+                <h6 class="card-header-title mb-0">Statistics</h6>
+                <div class="card-header-elements ml-auto">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-default icon-btn borderless btn-round md-btn-flat dropdown-toggle hide-arrow" data-toggle="dropdown"><i class="ion ion-ios-more"></i></button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="javascript:" class="dropdown-item"><i class="feather icon-maximize text-muted"></i> &nbsp; Full Screen</a>
+                            <a href="javascript:" class="dropdown-item"><i class="feather icon-refresh-cw text-muted"></i> &nbsp; Reload</a>
+                            <a href="javascript:" class="dropdown-item"><i class="feather icon-trash text-muted"></i> &nbsp; Remove</a>
                         </div>
-                        <div class="row">
-                            <!-- Staustic card 9 Start -->
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card mb-4">
-                                    <div class="progress bg-white">
-                                        <div class="progress-bar bg-primary" style="width:56%"></div>
-                                    </div>
-                                    <div class="card-body">
-                                        <h5>Vehicules VEX</h5>
-                                        <div class="text-center">
-                                            <span class="d-block text-primary display-3">56</span>
-                                            <p class="mb-0">Total</p>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer bg-primary bg-pattern-2">
-                                        <h6 class="text-white mb-0">Attribués: 22</h6>
-                                        <h6 class="text-white mb-0">Disponibles: 22</h6>
-                                    </div>
-                                </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body py-0">
+                <div id="chart-bar-moris" style="height:195px"></div>
+            </div>
+            <div class="card-footer pt-0 pb-0">
+                <div class="row row-bordered row-border-light">
+                    <div class="col-sm-3 py-3">
+                        <div class="d-flex align-items-center">
+                            <div class="ui-legend bg-primary" style="width:20px;height:20px"></div>
+                            <div class="ml-3">
+                                <p class="text-muted small mb-1">Order</p>
+                                <h5 class="mb-0">$590,47</h5>
                             </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card mb-4">
-                                    <div class="progress bg-white">
-                                        <div class="progress-bar bg-success" style="width:14%"></div>
-                                    </div>
-                                    <div class="card-body">
-                                        <h5>Vehicules VSC</h5>
-                                        <div class="text-center">
-                                            <span class="d-block text-success display-3">14</span>
-                                            <p class="mb-0">Total</p>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer bg-success bg-pattern-2">
-                                        <h6 class="text-white mb-0">Attribués: 22</h6>
-                                        <h6 class="text-white mb-0">Disponibles: 22</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card mb-4">
-                                    <div class="progress bg-white">
-                                        <div class="progress-bar bg-danger" style="width:85%"></div>
-                                    </div>
-                                    <div class="card-body">
-                                        <h5>Tickets</h5>
-                                        <div class="text-center">
-                                            <span class="d-block text-danger display-3">85</span>
-                                            <p class="mb-0">Total</p>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer bg-danger  bg-pattern-2">
-                                        <h6 class="text-white mb-0">Traités: 85</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card mb-4">
-                                    <div class="progress bg-white">
-                                        <div class="progress-bar bg-warning" style="width:42%"></div>
-                                    </div>
-                                    <div class="card-body">
-                                        <h5>Tickets en cours</h5>
-                                        <div class="text-center">
-                                            <span class="d-block text-warning display-3">42</span>
-                                            <p class="mb-0">Total</p>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer bg-warning  bg-pattern-2">
-                                        <h6 class="text-white mb-0">En cours: 42</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Staustic card 9 end -->
-
-                            <!-- [ Staustic widgets ] End -->
                         </div>
-
-                    <!-- [ content ] End -->
-                           <div class="row">
-                                <!-- Chart card 14 Start -->
-                                <div class="col-xl-6">
-                                    <div class="card mb-4">
-                                        <div class="card-header with-elements">
-                                            <h6 class="card-header-title mb-0">Statistics</h6>
-                                            <div class="card-header-elements ml-auto">
-                                                <div class="btn-group">
-                                                    <button type="button" class="btn btn-sm btn-default icon-btn borderless btn-round md-btn-flat dropdown-toggle hide-arrow" data-toggle="dropdown"><i class="ion ion-ios-more"></i></button>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <a href="javascript:" class="dropdown-item"><i class="feather icon-maximize text-muted"></i> &nbsp; Full Screen</a>
-                                                        <a href="javascript:" class="dropdown-item"><i class="feather icon-refresh-cw text-muted"></i> &nbsp; Reload</a>
-                                                        <a href="javascript:" class="dropdown-item"><i class="feather icon-trash text-muted"></i> &nbsp; Remove</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-body py-0">
-                                            <div id="chart-bar-moris" style="height:195px"></div>
-                                        </div>
-                                        <div class="card-footer pt-0 pb-0">
-                                            <div class="row row-bordered row-border-light">
-                                                <div class="col-sm-3 py-3">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="ui-legend bg-primary" style="width:20px;height:20px"></div>
-                                                        <div class="ml-3">
-                                                            <p class="text-muted small mb-1">Order</p>
-                                                            <h5 class="mb-0">$590,47</h5>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3 py-3">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="ui-legend bg-success" style="width:20px;height:20px"></div>
-                                                        <div class="ml-3">
-                                                            <p class="text-muted small mb-1">Stock</p>
-                                                            <h5 class="mb-0">486 Qt</h5>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3 py-3">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="ui-legend bg-danger" style="width:20px;height:20px"></div>
-                                                        <div class="ml-3">
-                                                            <p class="text-muted small mb-1">Profit</p>
-                                                            <h5 class="mb-0">$486,49</h5>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3 py-3">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="ui-legend bg-warning" style="width:20px;height:20px"></div>
-                                                        <div class="ml-3">
-                                                            <p class="text-muted small mb-1">Sale</p>
-                                                            <h5 class="mb-0">540 Kg</h5>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="card mb-4">
-                                        <div class="card-header with-elements">
-                                            <h6 class="card-header-title mb-0">Sale Order</h6>
-                                            <div class="card-header-elements ml-auto">
-                                                <label class="text m-0">
-                                                    <span class="text-light text-tiny font-weight-semibold align-middle">SHOW STATS</span>
-                                                    <span class="switcher switcher-sm d-inline-block align-middle mr-0 ml-2">
-                                                        <input type="checkbox" class="switcher-input" checked>
-                                                        <span class="switcher-indicator">
-                                                            <span class="switcher-yes"></span>
-                                                            <span class="switcher-no"></span>
-                                                        </span>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="row no-gutters row-bordered">
-                                            <div class="col-md-7 col-lg-12 col-xl-7">
-                                                <div class="card-body">
-                                                    <div id="chart-pie" style="height:220px"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-5 col-lg-12 col-xl-5">
-                                                <div class="card-body">
-                                                    <div class="pb-4">
-                                                        Order
-                                                        <div class="float-right">
-                                                            <span class="text-muted small">$590,47</span><i class="feather icon-arrow-down text-danger"></i>
-                                                        </div>
-                                                        <div class="progress mt-1" style="height:6px;">
-                                                            <div class="progress-bar bg-primary" style="width: 45%;"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="pb-4">
-                                                        Stock
-                                                        <div class="float-right">
-                                                            <span class="text-muted small">486 Qt</span><i class="feather icon-arrow-up text-success"></i>
-                                                        </div>
-                                                        <div class="progress mt-1" style="height:6px;">
-                                                            <div class="progress-bar bg-success" style="width: 90%;"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="pb-4">
-                                                        Profit
-                                                        <div class="float-right">
-                                                            <span class="text-muted small">$486,490.00</span><i class="feather icon-arrow-up text-success"></i>
-                                                        </div>
-                                                        <div class="progress mt-1" style="height:6px;">
-                                                            <div class="progress-bar bg-danger" style="width: 30%;"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="pb-4">
-                                                        Sale
-                                                        <div class="float-right">
-                                                            <span class="text-muted small">540 Kg</span><i class="feather icon-arrow-down text-danger"></i>
-                                                        </div>
-                                                        <div class="progress mt-1" style="height:6px;">
-                                                            <div class="progress-bar bg-warning" style="width: 55%;"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                  </div>
-                    <!-- [ content ] End -->
+                    </div>
+                    <div class="col-sm-3 py-3">
+                        <div class="d-flex align-items-center">
+                            <div class="ui-legend bg-success" style="width:20px;height:20px"></div>
+                            <div class="ml-3">
+                                <p class="text-muted small mb-1">Stock</p>
+                                <h5 class="mb-0">486 Qt</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 py-3">
+                        <div class="d-flex align-items-center">
+                            <div class="ui-legend bg-danger" style="width:20px;height:20px"></div>
+                            <div class="ml-3">
+                                <p class="text-muted small mb-1">Profit</p>
+                                <h5 class="mb-0">$486,49</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 py-3">
+                        <div class="d-flex align-items-center">
+                            <div class="ui-legend bg-warning" style="width:20px;height:20px"></div>
+                            <div class="ml-3">
+                                <p class="text-muted small mb-1">Sale</p>
+                                <h5 class="mb-0">540 Kg</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="card mb-4">
+            <div class="card-header with-elements">
+                <h6 class="card-header-title mb-0">Sale Order</h6>
+                <div class="card-header-elements ml-auto">
+                    <label class="text m-0">
+                        <span class="text-light text-tiny font-weight-semibold align-middle">SHOW STATS</span>
+                        <span class="switcher switcher-sm d-inline-block align-middle mr-0 ml-2">
+                            <input type="checkbox" class="switcher-input" checked>
+                            <span class="switcher-indicator">
+                                <span class="switcher-yes"></span>
+                                <span class="switcher-no"></span>
+                            </span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="row no-gutters row-bordered">
+                <div class="col-md-7 col-lg-12 col-xl-7">
+                    <div class="card-body">
+                        <div id="chart-pie" style="height:220px"></div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-lg-12 col-xl-5">
+                    <div class="card-body">
+                        <div class="pb-4">
+                            Order
+                            <div class="float-right">
+                                <span class="text-muted small">$590,47</span><i class="feather icon-arrow-down text-danger"></i>
+                            </div>
+                            <div class="progress mt-1" style="height:6px;">
+                                <div class="progress-bar bg-primary" style="width: 45%;"></div>
+                            </div>
+                        </div>
+                        <div class="pb-4">
+                            Stock
+                            <div class="float-right">
+                                <span class="text-muted small">486 Qt</span><i class="feather icon-arrow-up text-success"></i>
+                            </div>
+                            <div class="progress mt-1" style="height:6px;">
+                                <div class="progress-bar bg-success" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="pb-4">
+                            Profit
+                            <div class="float-right">
+                                <span class="text-muted small">$486,490.00</span><i class="feather icon-arrow-up text-success"></i>
+                            </div>
+                            <div class="progress mt-1" style="height:6px;">
+                                <div class="progress-bar bg-danger" style="width: 30%;"></div>
+                            </div>
+                        </div>
+                        <div class="pb-4">
+                            Sale
+                            <div class="float-right">
+                                <span class="text-muted small">540 Kg</span><i class="feather icon-arrow-down text-danger"></i>
+                            </div>
+                            <div class="progress mt-1" style="height:6px;">
+                                <div class="progress-bar bg-warning" style="width: 55%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Chart card 14 end -->

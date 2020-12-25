@@ -26,18 +26,65 @@
                                             <tr>
                                                 <th>Ticket ID</th>
                                                 <th>Motif de la demande</th>
+                                                <th>Date d'immobilisation</th>
                                                 <th>Nature prestation</th>
                                                 <th>Cout prestation</th>
                                                 <th>Nom fournisseur</th>
+                                                <th>Date notification au fournisseur</th>
                                                 <th>Numéro DA</th>
                                                 <th>Numéro bon de commande</th>
                                                 <th>Date fin travaux</th>
-                                                <th>Derniére mise à jour</th>
+                                                <th>Date de livraison</th>
                                                 <th>Priorité</th>
                                                 <th>Statut</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
+                                        <tbody>
+                                            <tr *ngFor="let dossiertravail of alltickets">
+                                                <td class="align-middle">
+                                                    1
+                                                </td>
+                                                <td class="align-middle">
+                                                    {{dossiertravail.motifDemande}}
+                                                </td>
+                                                <td class="align-middle">
+                                                    {{dossiertravail.dateImmobilisation}}
+                                                </td>
+                                                <td class="align-middle">
+                                                    {{dossiertravail.naturePrestation}}
+                                                </td>
+                                                <td class="align-middle">
+                                                    {{dossiertravail.coutPrestation}}
+                                                </td>
+                                                <td class="align-middle">
+                                                    {{dossiertravail.nomFournisseur}}
+                                                </td>
+                                                <td class="align-middle">
+                                                    {{dossiertravail.dateNotificationFournisseur}}
+                                                </td>
+                                                <td class="align-middle">
+                                                    {{dossiertravail.numeroDA}}
+                                                </td>
+                                                <td class="align-middle">
+                                                    {{dossiertravail.numeroBonCommande}}
+                                                </td>
+                                                <td class="align-middle">
+                                                    {{dossiertravail.dateFinTravaux}}
+                                                </td>
+                                                <td class="align-middle">
+                                                    {{dossiertravail.dateLivraison}}
+                                                </td>
+                                                <td class="align-middle">
+                                                    Any
+                                                </td>
+                                                <td class="align-middle">
+                                                    In progress
+                                                </td>
+                                                <td class="table-action">
+                                                    <a href="#" class="btn btn-icon btn-outline-success"><i class="feather icon-edit"></i></a>
+                                                    <a class="btn btn-icon btn-outline-danger" (click)="deleteTicket(dossiertravail.id)"><i class="feather icon-trash-2 "></i></a>
+                                                </td>
                                     </table>
                                 </div>
                             </div>

@@ -1,14 +1,15 @@
 <!-- [ Layout navbar ( Header ) ] Start -->
-<nav class="layout-navbar navbar navbar-expand-lg align-items-lg-center bg-white" id="layout-navbar">
+<div class="bg">
+<nav class="layout-navbar navbar navbar-expand-lg align-items-lg-center" id="layout-navbar">
   <!-- Brand demo (see assets/css/demo/demo.css) -->
   <a [routerLink]="['/home/accueil']"class="navbar-brand app-brand demo d-lg-none py-0 mr-4">
                         <span class="app-brand-logo demo">
-                            <img src="assets/img/logo-dark1.png" alt="Brand Logo" class="img-fluid">
+                            <img src="../../../assets/img/logo.png" alt="Brand Logo" class="img-fluid">
                         </span>
-                        <span class="app-brand-text demo font-weight-normal ml-2">E-parking</span>
+                        <span class="app-brand-text demo font-weight-normal ml-2 white size1">GTRA</span>
   </a>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#layout-navbar-collapse">
+  <button class="navbar-toggler white" type="button" data-toggle="collapse" data-target="#layout-navbar-collapse">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -16,22 +17,22 @@
     <!-- Divider -->
     <hr class="d-lg-none w-100 my-2">
 
-    <div class="navbar-nav align-items-lg-center">
+    <div class="navbar-nav align-items-lg-center white">
       <!-- Search -->
       <label class="nav-item navbar-text navbar-search-box p-0 active">
         <i class="feather icon-search navbar-icon align-middle"></i>
         <span class="navbar-search-input pl-2">
-                                    <input type="text" class="form-control navbar-text mx-2" placeholder="Search...">
-                                </span>
+            <input type="text" class="form-control navbar-text mx-2 ng-white size" placeholder="Search...">
+        </span>
       </label>
     </div>
 
-    <div class="navbar-nav align-items-lg-center ml-auto">
+    <div class="navbar-nav align-items-lg-center ml-auto white">
       <div class="demo-navbar-notifications nav-item dropdown mr-lg-3">
-        <a class="nav-link dropdown-toggle hide-arrow" href="#" data-toggle="dropdown">
+        <a class="nav-link dropdown-toggle hide-arrow white" href="#" data-toggle="dropdown">
           <i class="feather icon-bell navbar-icon align-middle"></i>
-          <span class="badge badge-danger badge-dot indicator"></span>
-          <span class="d-lg-none align-middle">&nbsp; Notifications</span>
+          <span class="badge badge-light badge-dot indicator white"></span>
+          <span class="d-lg-none align-middle white">&nbsp; Notifications</span>
         </a>
         <div class="dropdown-menu dropdown-menu-right">
           <div class="bg-primary text-center text-white font-weight-bold p-3">
@@ -93,12 +94,12 @@
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
                                     <span class="d-inline-flex flex-lg-row-reverse align-items-center align-middle">
                                         <img src="assets/img/avatars/1.png" alt class="d-block ui-w-30 rounded-circle">
-                                        <span class="px-1 mr-lg-2 ml-2 ml-lg-0">Elisabeth</span>
+                                        <span class="px-1 mr-lg-2 ml-2 ml-lg-0 white size">Elisabeth</span>
                                     </span>
         </a>
         <div class="dropdown-menu dropdown-menu-right">
           <a href="javascript:" class="dropdown-item">
-            <i class="feather icon-user text-muted"></i> &nbsp; Mon profil</a>
+            <i class="feather icon-user text-muted "></i> &nbsp; Mon profil</a>
           <a href="javascript:" class="dropdown-item">
             <i class="feather icon-settings text-muted"></i> &nbsp; Paramètres du compte</a>
           <div class="dropdown-divider"></div>
@@ -109,4 +110,5 @@
     </div>
   </div>
 </nav>
+</div>
 <!-- [ Layout navbar ( Header ) ] End -->

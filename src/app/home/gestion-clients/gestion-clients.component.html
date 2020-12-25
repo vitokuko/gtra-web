@@ -84,7 +84,6 @@
                                                         <tr>
                                                             <th>Prénom</th>
                                                             <th>Nom</th>
-                                                            <th>Email</th>
                                                             <th>Téléphone</th>
                                                             <th>Statut</th>
                                                             <th>Direction</th>
@@ -92,28 +91,25 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                            <td>Elisabeth</td>
-                                                            <td>DIOUF</td>
-                                                            <td>elisabethdiouf@orange-sonatel.com</td>
-                                                            <td>772131399</td>
-                                                            <td>Directrice</td>
-                                                            <td>DAL</td>
-                                                            <td>
-                                                                <a href="#!" class="btn btn-info btn-sm">Consulter attributions</a>
-                                                                <a href="#!" class="btn btn-danger btn-sm">Consulter tickets</a>
+                                                        <tr *ngFor="let client of allclients">
+                                                            <td class="align-middle">
+                                                                {{client.prenom}}
                                                             </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Elisabeth</td>
-                                                            <td>DIOUF</td>
-                                                            <td>elisabethdiouf@orange-sonatel.com</td>
-                                                            <td>772131399</td>
-                                                            <td>Directrice</td>
-                                                            <td>DAL</td>
+                                                            <td class="align-middle">
+                                                                {{client.nom}}
+                                                            </td>
+                                                            <td class="align-middle">
+                                                                {{client.telephone}}
+                                                            </td>
+                                                            <td class="align-middle">
+                                                                {{client.statut}}
+                                                            </td>
+                                                            <td class="align-middle">
+                                                                {{ (client && client.direction)? client.direction.libelle : '-'}}
+                                                            </td>
                                                             <td>
-                                                                <a href="#!" class="btn btn-info btn-sm">Consulter attributions</a>
-                                                                <a href="#!" class="btn btn-danger btn-sm">Consulter tickets</a>
+                                                                <a [routerLink]="['/home/gestionClients/consulterAttributionClient']" class="btn btn-info btn-sm">Consulter attributions</a>
+                                                                <a [routerLink]="['/home/gestionClients/consulterTicketClient']" class="btn btn-danger btn-sm">Consulter tickets</a>
                                                             </td>
                                                         </tr>
                                                     </tbody>

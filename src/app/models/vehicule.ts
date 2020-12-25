@@ -28,7 +28,9 @@ export class Vehicule {
         public utilisateur?: Utilisateur,
         public categorie?: Categorie,
         public parking?: Parking,
-
+        public direction?: Direction,
+        public modele?: Modele,
+        public marque?: Marque,
     ) {
     }
 }

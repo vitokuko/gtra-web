@@ -14,9 +14,8 @@
                         <div class="col-sm-3">
                             <div class="form-label">
                                 <label class="floating-label" for="Category">Catégorie</label>
-                                <select class="form-control" id="Category">
-                                    <option value="1" selected >VEX - description</option>
-                                    <option value="2" >VSC - description</option>
+                                <select class="form-control" id="Category" name="categorie" (change)="getAllVehiculesByCategorie($event.target.value)">
+                                    <option value={{categorie.id}} *ngFor="let categorie of allcategories" >{{ (categorie && categorie.libelle) ? categorie.libelle + '-' + categorie.description : '-' }}</option>
                                 </select>
                             </div>
                         </div>
@@ -37,9 +36,9 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="row align-items-center m-l-0">
-                                        <div class="col-sm-6"> 
+                                        <div class="col-sm-6">
                                         </div>
-                                    </div>                                 
+                                    </div>
                                     <div class="table-responsive">
                                         <table id="report-table" class="table mb-0">
                                             <thead class="thead-light">
@@ -100,26 +99,26 @@
                                                         {{vehicule.etat}}
                                                     </td>
                                                     <td class="align-middle">
-                                                        {{vehicule.categorieId}}
+                                                        {{ (vehicule && vehicule.categorie)? vehicule.categorie.libelle : '-'}}
                                                     </td>
                                                     <td class="align-middle">
-                                                        {{vehicule.marqueId}}
+                                                        {{ (vehicule && vehicule.marque)? vehicule.marque.libelle : '-'}}
                                                     </td>
                                                     <td class="align-middle">
-                                                        {{vehicule.modeleId}}
+                                                        {{ (vehicule && vehicule.modele)? vehicule.modele.libelle : '-'}}
                                                     </td>
                                                     <td class="align-middle">
-                                                        {{vehicule.utilisateurId}}
+                                                        {{ (vehicule && vehicule.utilisateur)? vehicule.utilisateur.prenom + ' ' + vehicule.utilisateur.nom : '-'}}
                                                     </td>
                                                     <td class="align-middle">
-                                                        {{vehicule.directionId}}
+                                                        {{ (vehicule && vehicule.direction)? vehicule.direction.libelle : '-'}}
                                                     </td>
                                                     <td class="align-middle">
-                                                        {{vehicule.parkingId}}
+                                                        {{ (vehicule && vehicule.parking)? vehicule.parking.libelle : '-'}}
                                                     </td>
                                                     <td class="table-action">
-                                                        <a href="#" class="btn btn-icon btn-outline-success"><i class="feather icon-edit"></i></a>
-                                                        <a class="btn btn-icon btn-outline-danger"><i class="feather icon-trash-2" (click)="deleteVehicules(vehicule,id) "></i></a>
+                                                        <a  [routerLink]="['/home/modifierVehicule, vehicule.id']" class="btn btn-icon btn-outline-success"><i class="feather icon-edit" ></i></a>
+                                                        <a class="btn btn-icon btn-outline-danger"><i class="feather icon-trash-2" (click)="deleteVehicule(vehicule.id)"></i></a>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -130,5 +129,5 @@
                         </div>
                 <!-- customar project  end -->
             </div>
-        
+
         <!-- [ content ] End -->
