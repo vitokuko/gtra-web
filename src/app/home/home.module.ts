@@ -40,6 +40,7 @@ import { ModifierAdminComponent } from './admin/modifier-admin/modifier-admin.co
 import { ModifierRoleComponent } from './role/modifier-role/modifier-role.component';
 import { ConsulterAttributionClientComponent } from './gestion-clients/consulter-attribution-client/consulter-attribution-client.component';
 import { ConsulterTicketClientComponent } from './gestion-clients/consulter-ticket-client/consulter-ticket-client.component';
+import { ModifierAttributionComponent } from './allocation-vehicule/modifier-attribution/modifier-attribution.component';
 
 
 
@@ -83,6 +84,8 @@ import { ConsulterTicketClientComponent } from './gestion-clients/consulter-tick
     ModifierRoleComponent,
     ConsulterAttributionClientComponent,
     ConsulterTicketClientComponent,
+    ModifierAttributionComponent,
+ 
   ],
   imports: [
     CommonModule,

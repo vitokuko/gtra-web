@@ -24,7 +24,7 @@ export class ClientComponent implements OnInit {
   }
 
   getAllClients(): void {
-    this.dataService.get(`Utilisateurs`)
+    this.dataService.get(`Utilisateurs?filter={"include":"direction"}`)
       .then(
         (res: any) => {
           console.log(res);

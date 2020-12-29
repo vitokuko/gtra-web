@@ -37,9 +37,10 @@ export class ListVehiculeComponent implements OnInit {
   }
 
   getAllVehiculesByCategorie(idCategorie: string): void {
-    this.dataService.get(`Categories/${idCategorie}/vehicules?filter={"include": ["categorie", "utilisateur", "parking", "modele", "direction", "marque"]}`)
+    this.dataService.get(`Categories/${idCategorie}/Vehicule?filter={"include": ["categorie", "utilisateur", "parking", "modele", "direction", "marque"]}`)
       .then(
         (res: Vehicule[]) => {
+          console.log(res);
           this.allvehicules = res;
         },
         err => {
@@ -48,20 +49,9 @@ export class ListVehiculeComponent implements OnInit {
       );
   }
 
-  patchVehicules(): void {
-    this.dataService.patch('Vehicule', 'id', 'data')
-    .then(
-      (res: any) => {
-        this.vehicule = res;
-      },
-      err => {
-        console.log(err);
-      }
-    );
-  }
 
   deleteVehicule(vehiculeId: string): void {
-    this.dataService.delete('Vehicule', vehiculeId)
+    this.dataService.delete('Vehicules', vehiculeId)
     .then(
       (res: any) => {
         console.log('delete : ', res)

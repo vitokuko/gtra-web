@@ -27,6 +27,10 @@ import { ModifierAdminComponent } from  './admin/modifier-admin/modifier-admin.c
 import { ModifierRoleComponent } from './role/modifier-role/modifier-role.component';
 import { ConsulterAttributionClientComponent } from './gestion-clients/consulter-attribution-client/consulter-attribution-client.component';
 import { ConsulterTicketClientComponent } from './gestion-clients/consulter-ticket-client/consulter-ticket-client.component';
+import { CapexVehiculeComponent } from './comptabilite/capex-vehicule/capex-vehicule.component';
+import { OpexVehiculeComponent } from './comptabilite/opex-vehicule/opex-vehicule.component';
+import { ModifierAttributionComponent } from './allocation-vehicule/modifier-attribution/modifier-attribution.component';
+
 
 
 
@@ -96,14 +100,14 @@ const routes: Routes = [
         component: GestionClientsComponent,
       },
       {
-        path: 'consulterAttributionClient',
+        path: 'gestionClients/consulterAttributionClient',
         component: ConsulterAttributionClientComponent,
       },
       {
-        path: 'consulterTicketClient',
+        path: 'gestionClients/consulterTicketClient',
         component: ConsulterTicketClientComponent,
       },
-      {
+      {   
         path: 'gestionVehicules',
         component: GestionVehiculesComponent,
       },
@@ -120,12 +124,24 @@ const routes: Routes = [
         component: AllocationVehiculeComponent,
       },
       {
+        path: 'allocationVehicule/modifierAttribution',
+        component: ModifierAttributionComponent,
+      },
+      {
         path: 'statistiques',
         component: StatistiquesComponent,
       },
       {
         path: 'comptabilite',
         component:ComptabiliteComponent,
+      },
+      {
+        path: 'comptabilite/capexVehicule',
+        component:CapexVehiculeComponent,
+      },
+      {
+        path: 'comptabilite/opexVehicule',
+        component:OpexVehiculeComponent,
       },
       {
         path: 'configuration',

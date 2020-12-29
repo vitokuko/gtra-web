@@ -23,7 +23,7 @@ export class AdminComponent implements OnInit {
   }
 
   getAllAdmins(): void {
-    this.dataService.get(`Utilisateurs`)
+    this.dataService.get(`Utilisateurs?filter={"include":"direction"}`)
       .then(
         (res: any) => {
           console.log(res);

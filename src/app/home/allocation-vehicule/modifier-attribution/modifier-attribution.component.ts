@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { Vehicule } from 'src/app/models/vehicule';
-import {DataService} from '../../shared/data/data.service';
+import {DataService} from '../../../shared/data/data.service';
 
 @Component({
-  selector: 'app-modifier-vehicule',
-  templateUrl: './modifier-vehicule.component.html',
-  styleUrls: ['./modifier-vehicule.component.css']
+  selector: 'app-modifier-attribution',
+  templateUrl: './modifier-attribution.component.html',
+  styleUrls: ['./modifier-attribution.component.css']
 })
-export class ModifierVehiculeComponent implements OnInit {
-  title = 'List vehicules';
+export class ModifierAttributionComponent implements OnInit {
+
+  title = 'Modifier allocation vehicules';
   allvehicules: Vehicule[] = [];
 
 
@@ -26,7 +27,7 @@ export class ModifierVehiculeComponent implements OnInit {
       (res: any) => {
         this.vehicule = res;
         console.log('patch : ', res)
-        this.showSuccess('Vehicule modifié avec succés !', 'Modification');
+        this.showSuccess('Attibution modifiée avec succés !', 'Modification');
     
       },
       err => {
@@ -48,4 +49,5 @@ export class ModifierVehiculeComponent implements OnInit {
       positionClass: 'toast-top-right'
     });
   }
+
 }
