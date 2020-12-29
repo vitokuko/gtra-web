@@ -1,0 +1,122 @@
+ <!-- [ Layout content ] Start -->
+
+ <h4 class="font-weight-bold py-3 mb-0">Véhicule</h4>
+ <div class="text-muted small mt-0 mb-4 d-block breadcrumb">
+     <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="#"><i class="feather icon-home"></i></a></li>
+         <li class="breadcrumb-item"><a href="#!">Gestion des véhicules</a></li>
+         <li class="breadcrumb-item active"><a href="#!">Modifier Véhicule</a></li>
+     </ol>
+ </div>
+ <div class="card mb-4">
+     <div class="card-body">
+         <div class="form-row align-items-center">
+             <div class="modal-body">
+                 <form>
+                   <div class="row">
+                     <div class="col-sm-6">
+                       <div class="col-sm-6">
+                         <label class="floating-label" for="categorie">Selectionner le catégorie</label>
+                         <select  id="categorie" [(ngModel)]="vehicule.categorieId" name="categorie" class="form-control" class="form-control">
+                           <option value="{{ categorie.id }}" *ngFor="let categorie of allCategories">{{ (categorie && categorie.libelle)? categorie.libelle : '-' }}</option>
+                         </select>
+                       </div>
+                     </div>
+                     <div class="col-sm-6">
+                       <div class="form-group">
+                         <label class="form-label" for="immatriculation">Immmatriculation</label>
+                         <input type="text" [(ngModel)]="vehicule.immatriculation" name="immatriculation" class="form-control" id="immatriculation" placeholder="">
+                       </div>
+                     </div>
+                     <div class="col-sm-6">
+                       <div class="form-group fill">
+                         <label class="form-label" for="date_mise_en_circulation">Date de mise en circulation</label>
+                         <input type="date" [(ngModel)]="vehicule.dateDeMiseenCirculation" name="dateDeMiseenCirculation" class="form-control" id="date_mise_en_circulation" placeholder="">
+                       </div>
+                     </div>
+                     <div class="col-sm-6">
+                       <div class="form-group fill">
+                         <label class="form-label" for="nombre_place">Nombre de place</label>
+                         <input type="text"[(ngModel)]="vehicule.nombrePlace" name="nombrePlace" class="form-control" id="nombre_place" placeholder="">
+                       </div>
+                     </div>
+                     <div class="col-sm-6">
+                       <div class="form-group">
+                         <label class="form-label" for="amortissement_en_mois">Amortissemnt mensuel</label>
+                         <input type="text" [(ngModel)]="vehicule.amortissement" name="amortissement" class="form-control" id="amortissement_en_mois" placeholder="">
+                       </div>
+                     </div>
+                     <div class="col-sm-6">
+                       <div class="form-group fill">
+                         <label class="form-label" for="puissance">Puissance</label>
+                         <input type="text" [(ngModel)]="vehicule.puissance" name = "puissance" class="form-control" id="puissance" placeholder="">
+                       </div>
+                     </div>
+                     <div class="col-sm-6">
+                       <div class="form-group">
+                         <label class="form-label" for="coutAchat">Cout d'achat</label>
+                         <input type="text" [(ngModel)]="vehicule.coutAchat" name="coutAchat" class="form-control" id="coutAchat" placeholder="">
+                       </div>
+                     </div>
+                     <div class="col-sm-6">
+                       <label class="floating-label" for="marque">Selectionner le marque</label>
+                       <select  id="marque" [(ngModel)]="vehicule.marqueId" name="marque" class="form-control">
+                         <option value="{{ marque.id }}" *ngFor="let marque of allMarques">{{ (marque && marque.libelle)? marque.libelle : '-' }}</option>
+                       </select>
+                     </div>
+                     <div class="col-sm-6">
+                       <label class="floating-label" for="modele">Selectionner le modele</label>
+                       <select  id="modele" [(ngModel)]="vehicule.modeleId" name="modele" class="form-control">
+                         <option value="{{ modele.id }}" *ngFor="let modele of allModeles">{{ (modele && modele.libelle)? modele.libelle : '-' }}</option>
+                       </select>
+                     </div>
+
+                     <div class="col-sm-6">
+                       <label class="floating-label" for="utilsateur">Selectionner l'utilsateur</label>
+                       <select  id="utilsateur" [(ngModel)]="vehicule.utilisateurId" name="utilsateur" class="form-control">
+                         <option value="{{ user.id }}" *ngFor="let user of allUtilisateurs">{{ (user && user.prenom && user.nom)? user.prenom +' '+ user.nom : '-' }}</option>
+                       </select>
+                     </div>
+                     <div class="col-sm-6">
+                       <label class="floating-label" for="direction">Selectionner la direction</label>
+                       <select  id="direction" [(ngModel)]="vehicule.directionId" name="direction" class="form-control">
+                         <option value="{{ direction.id }}" *ngFor="let direction of allDirections">{{ (direction && direction.libelle)? direction.libelle : '-' }}</option>
+                       </select>
+                     </div>
+                     <div class="col-sm-6">
+                       <label class="floating-label" for="parking">Selectionner le parking</label>
+                       <select  id="parking" [(ngModel)]="vehicule.parkingId" name="parking" class="form-control">
+                         <option value="{{ parking.id }}" *ngFor="let parking of allParkings">{{ (parking && parking.libelle)? parking.libelle : '-' }}</option>
+                       </select>
+                     </div>
+
+                     <div class="col-sm-6">
+                       <div class="form-group">
+                         <label class="form-label" for="etat">Etat</label>
+                         <select [(ngModel)]="vehicule.etat" name ="etat" class="form-control" id="etat">
+                           <option value="BON">Bon</option>
+                           <option value="PANNE">Panne</option>
+                         </select>
+                       </div>
+                     </div>
+                     <div class="col-sm-7">
+                       <div class="form-group">
+                         <label for="Description">Description</label>
+                         <textarea id=Description></textarea><br>
+                         <label class="file btn waves-effect waves-light btn-outline-primary mt-3 file-btn" for="flup">
+                           <i class="feather icon-paperclip"></i>Joindre un fichier
+                           <input type="file" name="file"  class="d-none" id="flup"/>
+                         </label>
+                       </div>
+                     </div>
+                     <div class="col-sm-12">
+                       <button (click)="patchVehicules(vehicule.id)" class="btn btn-primary">Submit</button>
+                       <button class="btn btn-danger">Clear</button>
+                     </div>
+                   </div>
+              </form>
+             </div>
+         </div>
+     </div>
+ </div>
+

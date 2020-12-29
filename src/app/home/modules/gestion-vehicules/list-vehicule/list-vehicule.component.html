@@ -1,0 +1,131 @@
+<h4 class="font-weight-bold py-3 mb-0">Véhicule</h4>
+<div class="text-muted small mt-0 mb-4 d-block breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#"><i class="feather icon-home"></i></a></li>
+        <li class="breadcrumb-item"><a [routerLink]="['/home/listVehicule']">Gestion des véhicules</a></li>
+        <li class="breadcrumb-item active"><a href="#!">Listes véhicules</a></li>
+    </ol>
+</div>
+<div class="card mb-4">
+    <div class="card-body">
+        <div class="form-row align-items-center">
+            <div class="col-sm-3">
+                <div class="form-label">
+                    <label class="floating-label" for="Category">Catégorie</label>
+                    <select class="form-control" id="Category" name="categorie" (change)="getAllVehiculesByCategorie($event.target.value)">
+                        <option value={{categorie.id}} *ngFor="let categorie of allcategories" >{{ (categorie && categorie.libelle) ? categorie.libelle + '-' + categorie.description : '-' }}</option>
+                    </select>
+                </div>
+            </div>
+          <div class="col-sm-4 offset-5">
+            <button type="button"
+                    class="btn btn-lg btn-primary"
+                    style="float:right;"
+                    [routerLink]="['/home/addVehicule']"
+            >
+              <i class="feather icon-plus"></i>Ajouter Vehicule</button>
+          </div>
+        </div>
+    </div>
+</div>
+    <div class="row">
+            <!-- customar project  start -->
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row align-items-center m-l-0">
+                            <div class="col-sm-6">
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table id="report-table" class="table mb-0">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>Immatriculation</th>
+                                        <th>Date de mise en circulation</th>
+                                        <th>Nombre de place</th>
+                                        <th>Durée amortissement</th>
+                                        <th>Ancienneté en mois</th>
+                                        <th>Ancienneté en année</th>
+                                        <th>Cout d'achat</th>
+                                        <th>Valeur nette comptable</th>
+                                        <th>Puissance</th>
+                                        <th>Visite technique</th>
+                                        <th>Etat</th>
+                                        <th>Catégorie</th>
+                                        <th>Marque</th>
+                                        <th>Modele</th>
+                                        <th>Responsable véhicule</th>
+                                        <th>Direction</th>
+                                        <th>Parking d'attache</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let vehicule of allvehicules">
+                                        <td class="align-middle">
+                                            {{vehicule.immatriculation}}
+                                        </td>
+                                        <td class="align-middle">
+                                            {{vehicule.dateDeMiseenCirculation}}
+                                        </td>
+                                        <td class="align-middle">
+                                            {{vehicule.nombrePlace}}
+                                        </td>
+                                        <td class="align-middle">
+                                            {{vehicule.amortissement}}
+                                        </td>
+                                        <td class="align-middle">
+                                            {{vehicule.ancienneteMois}}
+                                        </td>
+                                        <td class="align-middle">
+                                            {{vehicule.ancienneteAnnee}}
+                                        </td>
+                                        <td class="align-middle">
+                                            {{vehicule.coutAchat}}
+                                        </td>
+                                        <td class="align-middle">
+                                            {{vehicule.valeurNetteComptable}}
+                                        </td>
+                                        <td class="align-middle">
+                                            {{vehicule.puissance}}
+                                        </td>
+                                        <td class="align-middle">
+                                            {{vehicule.visiteTechnique}}
+                                        </td>
+                                        <td class="align-middle">
+                                            {{vehicule.etat}}
+                                        </td>
+                                        <td class="align-middle">
+                                            {{ (vehicule && vehicule.categorie)? vehicule.categorie.libelle : '-'}}
+                                        </td>
+                                        <td class="align-middle">
+                                            {{ (vehicule && vehicule.marque)? vehicule.marque.libelle : '-'}}
+                                        </td>
+                                        <td class="align-middle">
+                                            {{ (vehicule && vehicule.modele)? vehicule.modele.libelle : '-'}}
+                                        </td>
+                                        <td class="align-middle">
+                                            {{ (vehicule && vehicule.utilisateur)? vehicule.utilisateur.prenom + ' ' + vehicule.utilisateur.nom : '-'}}
+                                        </td>
+                                        <td class="align-middle">
+                                            {{ (vehicule && vehicule.direction)? vehicule.direction.libelle : '-'}}
+                                        </td>
+                                        <td class="align-middle">
+                                            {{ (vehicule && vehicule.parking)? vehicule.parking.libelle : '-'}}
+                                        </td>
+                                        <td class="table-action">
+                                            <a  [routerLink]="['/home/modifierVehicule', vehicule.id]" class="btn btn-icon btn-outline-success"><i class="feather icon-edit" ></i></a>
+                                            <a class="btn btn-icon btn-outline-danger"><i class="feather icon-trash-2" (click)="deleteVehicule(vehicule.id)"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!-- customar project  end -->
+</div>
+
+<!-- [ content ] End -->
