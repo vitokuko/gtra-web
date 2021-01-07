@@ -1,0 +1,90 @@
+<h4 class="font-weight-bold py-3 mb-0">Role</h4>
+<div class="text-muted small mt-0 mb-4 d-block breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#"><i class="feather icon-home"></i></a></li>
+        <li class="breadcrumb-item"><a href="#!">Gestion des Roles</a></li>
+        <li class="breadcrumb-item active"><a href="#!">Role</a></li>
+    </ol>
+</div>
+<div class="row">
+    <!-- subscribe start -->
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5>Listes des roles </h5>
+            </div>
+            <div class="card-body">
+                <div class="row align-items-center m-l-0">
+                    <div class="col-sm-6">
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        <button class="btn btn-success btn-sm mb-3 btn-round" data-toggle="modal" data-target="#modal-report"><i class="feather icon-plus"></i> Ajouter</button>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table id="report-table" class="table table-bordered table-striped mb-0">
+                        <thead>
+                            <tr>
+                                <th>Nom </th>
+                                <th>Description</th>
+                                <th>Date de création</th>
+                                <th>Date de modification</th>
+                                <th>Options</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let role of allroles">
+                                <td>  {{role.name}}</td>
+                                <td> {{role.description}} </td>
+                                <td> {{role.created}} </td>
+                                <td> {{role.modified}} </td>
+                                <td>
+                                    <a  [routerLink]="['/home/role/modifierRole', role.id]" class="btn btn-icon btn-outline-success"><i class="feather icon-edit"></i></a>
+                                    <a class="btn btn-icon btn-outline-danger"><i class="feather icon-trash-2" (click)="deleteRole(role.id)"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- subscribe end -->
+</div>
+
+<!-- Overlay -->
+<div class="layout-overlay layout-sidenav-toggle"></div>
+
+<!-- [ Layout wrapper] End -->
+<div class="modal fade" id="modal-report" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-xl">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Roles</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<form>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="floating-label" for="Name">Nom</label>
+            <input type="text" [(ngModel)]="role.name" name="nom" class="form-control" id="Name" placeholder="">
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group fill">
+            <label class="floating-label" for="Description">Description</label>
+            <input type="text" [(ngModel)]="role.description" name="description" class="form-control" id="Email" placeholder="">
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <button  (click)="postRole()" class="btn btn-primary">Submit</button>
+        <button class="btn btn-danger">Clear</button>
+    </div>
+</div>
+</form>
+</div>
+</div></div></div>

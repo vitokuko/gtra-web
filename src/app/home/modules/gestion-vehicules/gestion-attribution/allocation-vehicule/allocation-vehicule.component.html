@@ -1,0 +1,262 @@
+ 
+        <h4 class="font-weight-bold py-3 mb-0">Véhicule</h4>
+        <div class="text-muted small mt-0 mb-4 d-block breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#"><i class="feather icon-home"></i></a></li>
+                <li class="breadcrumb-item"><a href="#!">Gestion des véhicules</a></li>
+                <li class="breadcrumb-item active"><a href="#!">Attribution Véhicules</a></li>
+            </ol>
+        </div>
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="form-row align-items-center">
+                    <div class="col-sm-6">
+                            <div class="form-label">
+                                <label class="floating-label" for="Category">Catégorie</label>
+                                <select class="form-control" id="Category" name="categorie" (change)="getAllVehiculesByCategorie($event.target.value)">
+                                    <option value={{categorie.id}} *ngFor="let categorie of allCategories" >{{ (categorie && categorie.libelle) ? categorie.libelle + '-' + categorie.description : '-' }}</option>
+                                </select>
+                            </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-label">
+                            <label class="floating-label" for="Vehicule">Véhicules</label>
+                            <select class="form-control" id="Vehicules">
+                                <option value="1" selected>Attribués</option>
+                                <option value="2">Non attribués</option>
+                            </select>
+                        </div>
+                    </div>
+                  <div class="col-sm-6 offset-8"><br>
+                    
+                
+                    <div class="col-sm-8 text-right">
+                        <button class="btn btn-success btn-sm mb-3 btn-round" data-toggle="modal" data-target="#modal-report"><i class="feather icon-plus"></i> Attribuer véhicule</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-responsive">
+                    <table id="report-table" class="table mb-0">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Immatriculation</th>
+                                <th>Date de mise en circulation</th>
+                                <th>Nombre de place</th>
+                                <th>Durée amortissement</th>
+                                <th>Ancienneté en mois</th>
+                                <th>Ancienneté en année</th>
+                                <th>Cout d'achat</th>
+                                <th>Valeur nette comptable</th>
+                                <th>Puissance</th>
+                                <th>Visite technique</th>
+                                <th>Etat</th>
+                                <th>Catégorie</th>
+                                <th>Marque</th>
+                                <th>Modele</th>
+                                <th>Responsable véhicule</th>
+                                <th>Direction</th>
+                                <th>Parking d'attache</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let vehicule of allvehicules">
+                                <td class="align-middle">
+                                    {{vehicule.immatriculation}}
+                                </td>
+                                <td class="align-middle">
+                                    {{vehicule.dateDeMiseenCirculation | date:'dd/MM/yyyy'}}
+                                </td>
+                                <td class="align-middle">
+                                    {{vehicule.nombrePlace}}
+                                </td>
+                                <td class="align-middle">
+                                    {{vehicule.amortissement}}
+                                </td>
+                                <td class="align-middle">
+                                    {{vehicule.ancienneteMois}}
+                                </td>
+                                <td class="align-middle">
+                                    {{vehicule.ancienneteAnnee}}
+                                </td>
+                                <td class="align-middle">
+                                    {{vehicule.coutAchat}}
+                                </td>
+                                <td class="align-middle">
+                                    {{vehicule.valeurNetteComptable}}
+                                </td>
+                                <td class="align-middle">
+                                    {{vehicule.puissance}}
+                                </td>
+                                <td class="align-middle">
+                                    {{vehicule.visiteTechnique | date:'dd/MM/yyyy'}}
+                                </td>
+                                <td class="align-middle">
+                                    {{vehicule.etat}}
+                                </td>
+                                <td class="align-middle">
+                                    {{ (vehicule && vehicule.categorie)? vehicule.categorie.libelle : '-'}}
+                                </td>
+                                <td class="align-middle">
+                                    {{ (vehicule && vehicule.marque)? vehicule.marque.libelle : '-'}}
+                                </td>
+                                <td class="align-middle">
+                                    {{ (vehicule && vehicule.modele)? vehicule.modele.libelle : '-'}}
+                                </td>
+                                <td class="align-middle">
+                                    {{ (vehicule && vehicule.utilisateur)? vehicule.utilisateur.prenom + ' ' + vehicule.utilisateur.nom : '-'}}
+                                </td>
+                                <td class="align-middle">
+                                    {{ (vehicule && vehicule.direction)? vehicule.direction.libelle : '-'}}
+                                </td>
+                                <td class="align-middle">
+                                    {{ (vehicule && vehicule.parking)? vehicule.parking.libelle : '-'}}
+                                </td>
+                                <td class="table-action">
+                                    <a  [routerLink]="['/home/modifierVehicule', vehicule.id]" class="btn btn-icon btn-outline-success"><i class="feather icon-edit" ></i></a>
+                                    <a class="btn btn-icon btn-outline-danger"><i class="feather icon-trash-2" (click)="deleteVehicule(vehicule.id)"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+          <div class="modal fade" id="modal-report" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Attribuer véhicule</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="form-row align-items-center">
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                  <div class="col-sm-6">
+                                                    <label class="floating-label" for="categorie">Selectionner le catégorie</label>
+                                                    <select  id="categorie" [(ngModel)]="vehicule.categorieId" name="categorie" class="form-control" class="form-control">
+                                                      <option value="{{ categorie.id }}" *ngFor="let categorie of allCategories">{{ (categorie && categorie.libelle)? categorie.libelle : '-' }}</option>
+                                                    </select>
+                                                  </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label" for="immatriculation">Immmatriculation</label>
+                                                        <input type="text" [(ngModel)]="vehicule.immatriculation" name="immatriculation" class="form-control" id="immatriculation" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group fill">
+                                                        <label class="form-label" for="date_mise_en_circulation">Date de mise en circulation</label>
+                                                        <input type="date" [(ngModel)]="vehicule.dateDeMiseenCirculation" name="dateDeMiseenCirculation" class="form-control" id="date_mise_en_circulation" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group fill">
+                                                        <label class="form-label" for="nombre_place">Nombre de place</label>
+                                                        <input type="text"[(ngModel)]="vehicule.nombrePlace" name="nombrePlace" class="form-control" id="nombre_place" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label" for="amortissement_en_mois">Amortissemnt mensuel</label>
+                                                        <input type="text" [(ngModel)]="vehicule.amortissement" name="amortissement" class="form-control" id="amortissement_en_mois" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group fill">
+                                                        <label class="form-label" for="puissance">Puissance</label>
+                                                        <input type="text" [(ngModel)]="vehicule.puissance" name = "puissance" class="form-control" id="puissance" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label" for="coutAchat">Cout d'achat</label>
+                                                        <input type="text" [(ngModel)]="vehicule.coutAchat" name="coutAchat" class="form-control" id="coutAchat" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                  <div class="form-group">
+                                                      <label class="form-label" for="anciennete_en_mois">Anciennete en mois</label>
+                                                      <input type="text" [(ngModel)]="vehicule.ancienneteMois" name="ancienneteMois" class="form-control" id="anciennete_en_mois" placeholder="">
+                                                  </div>
+                                              </div>
+                                              <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="anciennete_en_annee">Anciennete en annee</label>
+                                                    <input type="text" [(ngModel)]="vehicule.ancienneteAnnee" name="ancienneteAnnee" class="form-control" id="anciennete_en_annee" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                              <div class="form-group">
+                                                  <label class="form-label" for="visite_technique">Visite technique</label>
+                                                  <input type="text" [(ngModel)]="vehicule.visiteTechnique" name="visiteTechnique" class="form-control" id="visite_technique" placeholder="">
+                                              </div>
+                                          </div>
+                                              <div class="col-sm-6">
+                                                <label class="floating-label" for="marque">Selectionner le marque</label>
+                                                <select  id="marque" [(ngModel)]="vehicule.marqueId" name="marque" class="form-control">
+                                                  <option value="{{ marque.id }}" *ngFor="let marque of allMarques">{{ (marque && marque.libelle)? marque.libelle : '-' }}</option>
+                                                </select>
+                                              </div>
+                                              <div class="col-sm-6">
+                                                <label class="floating-label" for="modele">Selectionner le modele</label>
+                                                <select  id="modele" [(ngModel)]="vehicule.modeleId" name="modele" class="form-control">
+                                                  <option value="{{ modele.id }}" *ngFor="let modele of allModeles">{{ (modele && modele.libelle)? modele.libelle : '-' }}</option>
+                                                </select>
+                                              </div>
+                
+                                                <div class="col-sm-6">
+                                                  <label class="floating-label" for="utilsateur">Selectionner l'utilsateur</label>
+                                                  <select  id="utilsateur" [(ngModel)]="vehicule.utilisateurId" name="utilsateur" class="form-control">
+                                                    <option value="{{ user.id }}" *ngFor="let user of allUtilisateurs">{{ (user && user.prenom && user.nom)? user.prenom +' '+ user.nom : '-' }}</option>
+                                                  </select>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                  <label class="floating-label" for="direction">Selectionner la direction</label>
+                                                  <select  id="direction" [(ngModel)]="vehicule.directionId" name="direction" class="form-control">
+                                                    <option value="{{ direction.id }}" *ngFor="let direction of allDirections">{{ (direction && direction.libelle)? direction.libelle : '-' }}</option>
+                                                  </select>
+                                                </div>
+                                              <div class="col-sm-6">
+                                                <label class="floating-label" for="parking">Selectionner le parking</label>
+                                                <select  id="parking" [(ngModel)]="vehicule.parkingId" name="parking" class="form-control">
+                                                  <option value="{{ parking.id }}" *ngFor="let parking of allParkings">{{ (parking && parking.libelle)? parking.libelle : '-' }}</option>
+                                                </select>
+                                              </div>
+                
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label" for="etat">Etat</label>
+                                                        <select [(ngModel)]="vehicule.etat" name ="etat" class="form-control" id="etat">
+                                                            <option value="BON">Bon</option>
+                                                            <option value="PANNE">Panne</option>
+                                                       </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-7">
+                                                    <div class="form-group">
+                                                        <label for="Description">Description</label>
+                                                        <textarea id=Description></textarea><br>
+                                                        <label class="file btn waves-effect waves-light btn-outline-primary mt-3 file-btn" for="flup">
+                                                            <i class="feather icon-paperclip"></i>Joindre un fichier
+                                                            <input type="file" name="file"  class="d-none" id="flup"/>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12">
+                                                    <button (click)="postVehicules()" class="btn btn-primary">Submit</button>
+                                                    <button class="btn btn-danger">Clear</button>
+                                                </div>
+                                            </div>
+                                     </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                

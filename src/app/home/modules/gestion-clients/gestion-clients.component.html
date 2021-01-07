@@ -1,0 +1,126 @@
+
+                        <h4 class="font-weight-bold py-3 mb-0">Clients</h4>
+                        <div class="text-muted small mt-0 mb-4 d-block breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#"><i class="feather icon-home"></i></a></li>
+                                <li class="breadcrumb-item"><a href="#!">Gestion des clients</a></li>
+                                <li class="breadcrumb-item active"><a href="#!">Clients</a></li>
+                            </ol>
+                        </div>
+                        <div class="row">
+                                <!-- customar project  start -->
+
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row align-items-center m-l-0">
+                                                <div class="col-auto">
+                                                    <i class="fas fa-users f-36 text-danger"></i>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <h6 class="text-muted m-b-10">Clients</h6>
+                                                    <h2 class="m-b-0">9</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row align-items-center m-l-0">
+                                                <div class="col-auto">
+                                                    <i class="fas fa-book-open f-36 text-success"></i>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <h6 class="text-muted m-b-10">Nombre d'attributions</h6>
+                                                    <h2 class="m-b-0">5</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row align-items-center m-l-0">
+                                                <div class="col-auto">
+                                                    <i class="fas fa-book-open f-36 text-success"></i>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <h6 class="text-muted m-b-10">Nombre de tickets</h6>
+                                                    <h2 class="m-b-0">25</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row align-items-center m-l-0">
+                                                <div class="col-auto">
+                                                    <i class="feather icon-activity "></i>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <h6 class="text-muted m-b-10">Statistiques</h6>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- subscribe start -->
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        
+                                        <div class="card-body">
+                                            <div class="table-responsive">
+                                                <table id="report-table" class="table table-bordered table-striped mb-0">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Prénom</th>
+                                                            <th>Nom</th>
+                                                            <th>Téléphone</th>
+                                                            <th>Statut</th>
+                                                            <th>Direction</th>
+                                                            <th>Options</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr *ngFor="let client of allclients">
+                                                            <td class="align-middle">
+                                                                {{client.prenom}}
+                                                            </td>
+                                                            <td class="align-middle">
+                                                                {{client.nom}}
+                                                            </td>
+                                                            <td class="align-middle">
+                                                                {{client.telephone}}
+                                                            </td>
+                                                            <td class="align-middle">
+                                                                {{client.statut}}
+                                                            </td>
+                                                            <td class="align-middle">
+                                                                {{ (client && client.direction)? client.direction.libelle : '-'}}
+                                                            </td>
+                                                            <td>
+                                                                <a [routerLink]="['/home/gestionClients/consulterAttributionClient']" class="btn btn-info btn-sm">Consulter attributions</a>
+                                                                <a [routerLink]="['/home/gestionClients/consulterTicketClient']" class="btn btn-danger btn-sm">Consulter tickets</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- subscribe end -->
+                            </div>
+
+                            <!-- customar project  end -->
+        <!-- Overlay -->
+        <div class="layout-overlay layout-sidenav-toggle"></div>
+    <!-- [ Layout wrapper] End -->
+

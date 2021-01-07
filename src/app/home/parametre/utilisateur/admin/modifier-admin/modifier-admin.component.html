@@ -1,0 +1,56 @@
+<div class="modal fade" id="modal-report" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Admin</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-12">
+                            <h5>Informations Personnelles</h5>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Prenom">Prénom</label>
+                                <input type="text" [(ngModel)]="admin.prenom" name="prenom" class="form-control" id="Prenom" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Nom">Nom</label>
+                                <input type="text" [(ngModel)]="admin.nom" name="nom" class="form-control" id="Nom" placeholder="">
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-6">
+                            <div class="form-group fill">
+                                <label class="floating-label" for="Telephone">Téléphone</label>
+                                <input type="text" [(ngModel)]="admin.telephone" name="telephone" class="form-control" id="Telephone" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Statut">Statut</label>
+                                <input type="text" [(ngModel)]="admin.statut" name="statut" class="form-control" id="Statut" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="floating-label" for="direction">Selectionner la direction</label>
+                            <select  id="direction" [(ngModel)]="admin.directionId" name="direction" class="form-control">
+                              <option value="{{ direction.id }}" *ngFor="let direction of allDirections">{{ (direction && direction.libelle)? direction.libelle : '-' }}</option>
+                            </select>
+                          </div>
+                        <div class="col-sm-12">
+                            <button (click)="patchAdmins(admin.id)" class="btn btn-primary">Submit</button>
+                            <button class="btn btn-danger">Clear</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
