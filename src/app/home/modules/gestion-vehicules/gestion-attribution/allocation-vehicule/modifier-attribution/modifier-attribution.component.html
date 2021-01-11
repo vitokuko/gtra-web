@@ -42,8 +42,14 @@
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
+                        <label class="form-label" for="duree_amortissement"> Durée Amortissemnt</label>
+                        <input type="text" [(ngModel)]="vehicule.dureeAmortissement" name="amortissement" class="form-control" id="duree_amortissement" placeholder="">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
                         <label class="form-label" for="amortissement_en_mois">Amortissemnt mensuel</label>
-                        <input type="text" [(ngModel)]="vehicule.amortissement" name="amortissement" class="form-control" id="amortissement_en_mois" placeholder="">
+                        <input type="text" [(ngModel)]="vehicule.amortissementAnnuel" name="amortissement" class="form-control" id="amortissement_en_mois" placeholder="">
                       </div>
                     </div>
                     <div class="col-sm-6">

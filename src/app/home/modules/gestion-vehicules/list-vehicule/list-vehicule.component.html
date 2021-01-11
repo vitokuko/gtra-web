@@ -45,6 +45,7 @@
                                         <th>Date de mise en circulation</th>
                                         <th>Nombre de place</th>
                                         <th>Durée amortissement</th>
+                                        <th>Amortissement mensuel</th>
                                         <th>Ancienneté en mois</th>
                                         <th>Ancienneté en année</th>
                                         <th>Cout d'achat</th>
@@ -73,7 +74,10 @@
                                             {{vehicule.nombrePlace}}
                                         </td>
                                         <td class="align-middle">
-                                            {{vehicule.amortissement}}
+                                            {{vehicule.dureeAmortissement}}
+                                        </td>
+                                        <td class="align-middle">
+                                            {{vehicule.amortissementAnnuel}}
                                         </td>
                                         <td class="align-middle">
                                             {{vehicule.ancienneteMois}}

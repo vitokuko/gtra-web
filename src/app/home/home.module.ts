@@ -41,6 +41,7 @@ import { ModifierRoleComponent } from './parametre/role/modifier-role/modifier-r
 import { ConsulterAttributionClientComponent } from './modules/gestion-clients/consulter-attribution-client/consulter-attribution-client.component';
 import { ConsulterTicketClientComponent } from './modules/gestion-clients/consulter-ticket-client/consulter-ticket-client.component';
 import { ModifierAttributionComponent } from './modules/gestion-vehicules/gestion-attribution/allocation-vehicule/modifier-attribution/modifier-attribution.component';
+import { UploadFileComponent } from './upload-file/upload-file.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +83,8 @@ import { ModifierAttributionComponent } from './modules/gestion-vehicules/gestio
     ModifierRoleComponent,
     ConsulterAttributionClientComponent,
     ConsulterTicketClientComponent,
-    ModifierAttributionComponent
+    ModifierAttributionComponent,
+    UploadFileComponent
   ],
   imports: [
     CommonModule,

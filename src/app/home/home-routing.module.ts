@@ -31,6 +31,7 @@ import { CapexVehiculeComponent } from './modules/comptabilite/capex-vehicule/ca
 import { OpexVehiculeComponent } from './modules/comptabilite/opex-vehicule/opex-vehicule.component';
 import { ModifierAttributionComponent } from './modules/gestion-vehicules/gestion-attribution/allocation-vehicule/modifier-attribution/modifier-attribution.component';
 import {ModifierVehiculeComponent} from './modules/gestion-vehicules/modifier-vehicule/modifier-vehicule.component';
+import { UploadFileComponent } from './upload-file/upload-file.component';
 
 
 
@@ -159,6 +160,10 @@ const routes: Routes = [
       {
         path: 'role/modifierRole/:id',
         component: ModifierRoleComponent,
+      },
+      {
+        path: 'uploadFile',
+        component: UploadFileComponent,
       }
     ]
   }
