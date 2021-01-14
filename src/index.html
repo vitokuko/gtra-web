@@ -32,6 +32,7 @@
   <!-- Libs -->
   <link rel="stylesheet" href="./assets/libs/perfect-scrollbar/perfect-scrollbar.css">
   <link rel="stylesheet" href="./assets/libs/flot/flot.css">
+  <link rel="stylesheet" href="./assets/js/dropzone-5.7.0/dist/dropzone.css">
 </head>
 <body>
   <app-root></app-root>
@@ -51,12 +52,13 @@
 <script src="./assets/libs/eve/eve.js"></script>
 <script src="./assets/libs/flot/flot.js"></script>
 <script src="./assets/libs/flot/curvedLines.js"></script>
-<script src="./assets/libs/dropzone/dropzone.js"></script>
-<script src="./assets/libs/flow-js/flow.js"></script>
 
 <!-- Demo -->
 <script src="./assets/js/analytics.js"></script>
-<script src="./assets/js/pages/forms_file-upload.js"></script>
+<script src="./assets/js/dropzone-5.7.0/dist/dropzone.js"></script>
 
+<script src="./assets/js/dropzone-5.7.0/dist/dropzone-amd-module.js"></script>
+
+<script>$('.file-upload').file_upload()</script>
 </body>
 </html>
